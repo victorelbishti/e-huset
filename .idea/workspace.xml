@@ -38,20 +38,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="95">
               <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="1334" column="22" selection-start-line="1334" selection-start-column="22" selection-end-line="1334" selection-end-column="22" />
+            <state relative-caret-position="131">
+              <caret line="4704" column="23" lean-forward="true" selection-start-line="4704" selection-start-column="18" selection-end-line="4704" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -263,16 +263,15 @@
       <workItem from="1526393161983" duration="9037000" />
       <workItem from="1526472846348" duration="1483000" />
       <workItem from="1526505983893" duration="7869000" />
-      <workItem from="1526558113603" duration="1040000" />
+      <workItem from="1526558113603" duration="1422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46527000" />
+    <option name="totallyTimeSpent" value="46909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2524785" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -281,7 +280,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32915717" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.26068377" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.6182336" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -607,17 +606,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="131">
+          <caret line="4704" column="23" lean-forward="true" selection-start-line="4704" selection-start-column="18" selection-end-line="4704" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="1334" column="22" selection-start-line="1334" selection-start-column="22" selection-end-line="1334" selection-end-column="22" />
+        <state relative-caret-position="95">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
         </state>
       </provider>
     </entry>
