@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Home from "../routes/Home";
 import Features from "../routes/Features";
 import Contact from "../routes/Contact";
+import Pricing from "../routes/Pricing";
 
 class Layout extends Component {
     render() {
@@ -19,6 +20,7 @@ class Layout extends Component {
                     <Home />
                     <Features />
                     <Contact />
+                    <Pricing />
                 </main>
                 <Footer/>
             </div>

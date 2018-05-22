@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Icon from "../components/Icon";
-import { SectionDiv, Grid, OneThridCell, Card} from "../components/Styled";
+import { SectionDiv, Grid, GridCell, Card } from "../components/Styled";
 
 const Section = styled.section`
     display: flex;
@@ -10,34 +10,34 @@ const Section = styled.section`
     margin-top: -220px;
 `;
 
-class Contact extends Component {
+class Features extends Component {
 
     render() {
         return (
             <Section id="features">
-                <SectionDiv>
-                    <Grid>
-                        <OneThridCell>
+                <SectionDiv border={"bottom"}>
+                    <Grid columns={"1fr 1fr 1fr"} gap={"40px"}>
+                        <GridCell>
                             <Card>
                                 <Icon icon="computer" />
                                 <h3>Card 1</h3>
                                 <p>Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
                             </Card>
-                        </OneThridCell>
-                        <OneThridCell>
+                        </GridCell>
+                        <GridCell>
                             <Card>
                                 <Icon icon="star" />
                                 <h3>Card 2</h3>
                                 <p>Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
                             </Card>
-                        </OneThridCell>
-                        <OneThridCell>
+                        </GridCell>
+                        <GridCell>
                             <Card>
                                 <Icon icon="phone" />
                                 <h3>Card 3</h3>
                                 <p>Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
                             </Card>
-                        </OneThridCell>
+                        </GridCell>
                     </Grid>
                 </SectionDiv>
             </Section>
@@ -45,4 +45,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default Features;

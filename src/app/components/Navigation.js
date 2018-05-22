@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Scroll from "smoothscroll";
 
 const Nav = styled.nav `
     font-family: 'Proxima-Nova-Bold', sans-serif;
@@ -47,18 +48,37 @@ const NavLink = styled.a`
     }
 `;
 
-const navItems = ['Våra paket', 'Referenser', 'Kontakta oss'];
+const navItems = {
+    features: 'Våra paket',
+    references: 'Referenser',
+    contact: 'Kontakta oss'
+};
 
 class Navigation extends Component {
+
+    constructor() {
+        super();
+
+        this.handleClickEvent = this.handleClickEvent.bind(this);
+    }
+
+    handleClickEvent(elementName){
+
+        let element = document.querySelector('#' + elementName);
+        let offset = element.offsetTop - 100;
+        Scroll(offset, 1000);
+    }
+
     render() {
         return (
             <Nav id={this.props.sticky ? 'true' : 'false'}>
                 <ul>
                     {
-                        navItems.map((item, i) => {
+                        Object.keys(navItems).map((item, i) => {
+                            let items = Object.entries(navItems)[i];
                             return(
                                 <ListItem key={ i }>
-                                    <NavLink sticky={this.props.sticky} href="#">{ item }</NavLink>
+                                    <NavLink sticky={this.props.sticky} href="#" onClick={ () => this.handleClickEvent(items[0]) }>{ items[1] }</NavLink>
                                 </ListItem>
                             );
                         })

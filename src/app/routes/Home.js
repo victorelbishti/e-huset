@@ -7,6 +7,10 @@ const Section = styled.section`
     display: flex;
     align-items: center;
     background-image: linear-gradient(-140deg, #2c7dbc 15%, #7cccc5 70%);
+    
+    h2 {
+        color: #ffffff;
+    }
 `;
 
 const H2 = styled.h2`
@@ -18,7 +22,7 @@ class Home extends Component {
         return (
             <Section id="home">
                 <SectionDiv>
-                    <H2>Få ordning på din digitala profil</H2>
+                    <h2>Få ordning på din digitala profil</h2>
                 </SectionDiv>
             </Section>
         );
