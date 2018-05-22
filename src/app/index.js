@@ -42,7 +42,7 @@ injectGlobal`
         overflow-x: hidden;
         font-family: "Proxima-Nova", sans-serif;
         font-weight: normal;
-        line-height: normal;
+        line-height: 1.5em;
         -webkit-font-smoothing: antialiased;
         background-color: rgba(247,247,247,0.9);
     }

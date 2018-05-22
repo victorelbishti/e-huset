@@ -47,25 +47,15 @@ const NavLink = styled.a`
     }
 `;
 
+const navItems = ['Våra paket', 'Referenser', 'Kontakta oss'];
+
 class Navigation extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            navItems: [
-                'Våra paket',
-                'Referenser',
-                'Kontakta oss'
-            ]
-        }
-    }
-
     render() {
         return (
             <Nav id={this.props.sticky ? 'true' : 'false'}>
                 <ul>
                     {
-                        this.state.navItems.map((item, i) => {
+                        navItems.map((item, i) => {
                             return(
                                 <ListItem key={ i }>
                                     <NavLink sticky={this.props.sticky} href="#">{ item }</NavLink>

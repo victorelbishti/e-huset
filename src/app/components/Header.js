@@ -85,7 +85,7 @@ class Header extends Component {
 
     render() {
         return (
-            <HeaderWrapper sticky={this.state.scrolling} className={"header"}>
+            <HeaderWrapper sticky={this.state.scrolling}>
                 <HeaderContainer>
                     <LogoDiv className={"logo"}>
                         <h1>
