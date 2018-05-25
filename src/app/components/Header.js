@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Navigation from "./Navigation";
+import Logo from "../images/logotype.png";
 
 const HeaderWrapper = styled.header`
     position: fixed;
@@ -88,9 +89,9 @@ class Header extends Component {
             <HeaderWrapper sticky={this.state.scrolling}>
                 <HeaderContainer>
                     <LogoDiv className={"logo"}>
-                        <h1>
-                            <LogoLink color={this.state.scrolling ? '#000' : '#fff'} href="/">E-Huset</LogoLink>
-                        </h1>
+                        <a href={"/"}>
+                            <img src={Logo} alt={"E-huset.se"} width={"75"} />
+                        </a>
                     </LogoDiv>
                     <div className={"menu"}>
                         <Navigation sticky={this.state.scrolling} />
