@@ -39,23 +39,12 @@ var config =  {
                 ]
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/,
                 use: [
                     {
                         loader: 'url-loader',
                         options: {
                             limit: 8900
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[hash].[ext]'
                         }
                     }
                 ]
