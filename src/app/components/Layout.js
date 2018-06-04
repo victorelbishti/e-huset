@@ -8,8 +8,10 @@ import Footer from "./Footer";
 // Routes
 import Home from "../routes/Home";
 import Features from "../routes/Features";
-import Contact from "../routes/Contact";
 import About from "../routes/About";
+import Reference from "../routes/Reference";
+import Contact from "../routes/Contact";
+
 
 class Layout extends Component {
     render() {
@@ -20,6 +22,7 @@ class Layout extends Component {
                     <Home />
                     <Features />
                     <About />
+                    <Reference />
                     <Contact />
                 </main>
                 <Footer/>

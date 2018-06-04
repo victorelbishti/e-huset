@@ -26,7 +26,10 @@ class Home extends Component {
                     <Grid columns={"1fr 1fr"}>
                         <GridCell>
                             <h2>Få ordning på din digitala profil</h2>
-                            <Text>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat.</Text>
+                            <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och digital
+                                marknadsföring. Oavsett om du är i behov av en ny hemsida, en digital
+                                renovering eller några timmar support i månaden så finns vi här för att
+                                hjälpa dig. Scrolla ner för att se våra erbjudanden.</Text>
                         </GridCell>
                         <GridCell>
                             <Icon icon={"image"} />

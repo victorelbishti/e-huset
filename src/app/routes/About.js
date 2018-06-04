@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import { Section, SectionDiv, Grid, GridCell, TitleArea, TextArea } from "../components/Styled";
 
 class About extends Component {

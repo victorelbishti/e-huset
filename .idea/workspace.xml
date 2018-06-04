@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6791def8-0319-45b4-b713-b414883c28ee" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/mailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/ContactForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/FormMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/routes/About.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/routes/Reference.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Icon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/Styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/Features.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/Features.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/About.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routes/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/routes/Pricing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,16 +25,16 @@
       <file leaf-file-name="Styled.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/Styled.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="102">
+              <caret line="6" column="23" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Features.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Features.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/routes/Features.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="-125">
               <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -68,9 +58,10 @@
       <file leaf-file-name="Layout.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="147">
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
+                <element signature="e#58#88#0" expanded="true" />
                 <element signature="e#131#165#0" expanded="true" />
               </folding>
             </state>
@@ -81,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/app/components/Navigation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="62">
-              <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -92,8 +83,11 @@
       <file leaf-file-name="About.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/routes/About.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+            <state relative-caret-position="102">
+              <caret line="6" column="16" selection-end-line="29" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,38 +104,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/ContactForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="132" column="14" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormMessage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/FormMessage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/routes/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+            <state relative-caret-position="272">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Reference.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/routes/Reference.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -186,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/src/app/routes/router.js" />
         <option value="$PROJECT_DIR$/src/app/router.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/app/index.js" />
@@ -196,17 +186,19 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/app/components/Navigation.js" />
         <option value="$PROJECT_DIR$/src/app/components/Header.js" />
-        <option value="$PROJECT_DIR$/src/app/routes/Home.js" />
         <option value="$PROJECT_DIR$/src/app/mailer.php" />
         <option value="$PROJECT_DIR$/dist/mailer.php" />
         <option value="$PROJECT_DIR$/src/app/components/FormMessage.js" />
         <option value="$PROJECT_DIR$/src/app/components/ContactForm.js" />
         <option value="$PROJECT_DIR$/src/app/routes/Contact.js" />
-        <option value="$PROJECT_DIR$/src/app/components/Layout.js" />
         <option value="$PROJECT_DIR$/src/app/components/Icon.js" />
-        <option value="$PROJECT_DIR$/src/app/routes/About.js" />
         <option value="$PROJECT_DIR$/src/app/components/Styled.js" />
         <option value="$PROJECT_DIR$/src/app/routes/Features.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/Home.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/About.js" />
+        <option value="$PROJECT_DIR$/src/app/components/Layout.js" />
+        <option value="$PROJECT_DIR$/src/app/routes/Reference.js" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -251,26 +243,6 @@
               <item name="E-huset.se" type="b2602c69:ProjectViewProjectNode" />
               <item name="E-huset.se" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="E-huset.se" type="b2602c69:ProjectViewProjectNode" />
-              <item name="E-huset.se" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="E-huset.se" type="b2602c69:ProjectViewProjectNode" />
-              <item name="E-huset.se" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="E-huset.se" type="b2602c69:ProjectViewProjectNode" />
-              <item name="E-huset.se" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,12 +311,12 @@
       <workItem from="1527256485393" duration="3871000" />
       <workItem from="1527325015300" duration="1623000" />
       <workItem from="1527443654169" duration="6000" />
-      <workItem from="1528098641426" duration="19912000" />
+      <workItem from="1528098641426" duration="22332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91616000" />
+    <option name="totallyTimeSpent" value="94036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -376,9 +348,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -520,13 +489,6 @@
     <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -602,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/routes/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/routes/Contact.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -635,19 +587,9 @@
     <entry file="file://$PROJECT_DIR$/src/app/components/Navigation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
-          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <element signature="e#131#165#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -662,27 +604,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/routes/About.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-end-line="29" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="e#58#88#0" expanded="true" />
+            <element signature="e#131#165#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/Styled.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="4" selection-start-column="4" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/routes/Features.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="-125">
           <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/routes/Reference.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
         </state>
       </provider>
     </entry>
