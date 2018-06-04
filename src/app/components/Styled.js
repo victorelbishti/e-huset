@@ -54,6 +54,7 @@ export const GridCell = styled.div`
 `;
 
 export const Card = styled.div`
+    min-height: 500px;
     padding: 50px 20px;
     margin-bottom: 30px;
     text-align: center;
@@ -65,4 +66,22 @@ export const Card = styled.div`
     &:hover {
         box-shadow: 0 0 20px 0px rgba(0,0,0,0.05);
     }
+`;
+
+export const TitleArea = styled.div`
+    max-width: 555px;
+    margin: 0 auto;
+    text-align: center;
+`;
+
+
+export const TextArea = styled.div`
+    font-family: Proxima-Nova-Light;
+    text-align: center;
+`;
+
+export const Section = styled.section`
+    display: flex;
+    align-items: center;
+    padding: 0;
 `;

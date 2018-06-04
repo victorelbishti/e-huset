@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Navigation from "./Navigation";
 import Logo from "../images/logotype.png";
+import LogoWhite from "../images/logotype-white.png";
 
 const HeaderWrapper = styled.header`
     position: fixed;
@@ -49,12 +50,6 @@ const LogoDiv = styled.div`
     transition: all 0.4s cubic-bezier(0.4, 0.25, 0, 1);
 `;
 
-const LogoLink = styled.a`
-    color: ${props => props.color};
-    outline: none;
-    transition: all 0.4s cubic-bezier(0.4, 0.25, 0, 1);
-`;
-
 class Header extends Component {
 
     constructor() {
@@ -90,7 +85,7 @@ class Header extends Component {
                 <HeaderContainer>
                     <LogoDiv className={"logo"}>
                         <a href={"/"}>
-                            <img src={Logo} alt={"E-huset.se"} width={"75"} />
+                            <img src={this.state.scrolling ? Logo : LogoWhite} alt={"E-huset.se"} width={"75"} />
                         </a>
                     </LogoDiv>
                     <div className={"menu"}>

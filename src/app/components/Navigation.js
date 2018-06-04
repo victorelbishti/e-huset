@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Scroll from "smoothscroll";
+    import Scroll from "smoothscroll";
 
 const Nav = styled.nav `
     font-family: 'Proxima-Nova-Bold', sans-serif;
