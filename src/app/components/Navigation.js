@@ -77,9 +77,10 @@ const MobileNavLink = styled(NavLink)`
 `;
 
 const MobileIconContainer = styled.div`
+    display: none;
 
-    @media (min-width: ${size.medium}) {
-        display: none;
+    @media (max-width: ${size.medium}) {
+        display: block;
     }
 
     svg {
@@ -175,7 +176,7 @@ class Navigation extends Component {
                                 let items = Object.entries(navItems)[i];
                                 return(
                                     <MobileListItem key={ i }>
-                                        <MobileNavLink sticky={this.props.sticky} href="#" onClick={ () => this.handleMobileMenuClickEvent(items[0]) }>{ items[1] }</MobileNavLink>
+                                        <MobileNavLink href="#" onClick={ () => this.handleMobileMenuClickEvent(items[0]) }>{ items[1] }</MobileNavLink>
                                     </MobileListItem>
                                 );
                             })
