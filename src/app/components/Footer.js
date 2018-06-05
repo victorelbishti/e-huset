@@ -45,7 +45,7 @@ class Header extends Component {
                             <h3>Få ordning på din digitala profil</h3>
                         </GridCell>
                         <GridCell padding={"40px 0 40px 50px"}>
-                            <VerticalLine background={"#fff"} side={"left"}/>
+                            <VerticalLine responsive={"display: none"} background={"#fff"} side={"left"}/>
                             <FooterCard marginTop={"0"}>
                                 <h4>E-POST</h4>
                                 <a href={"mailto:info@e-huset.se"}>info@e-huset.se</a>

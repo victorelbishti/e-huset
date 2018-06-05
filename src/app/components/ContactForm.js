@@ -6,10 +6,9 @@ import FormMessage from "./FormMessage";
 const FieldSet = styled.fieldset`
 	border: 0 none;
 	border-radius: 3px;
-	padding: 20px 30px;
+	padding: 20px 10px;
 	box-sizing: border-box;
-	width: 80%;
-	margin: 0 10%;
+	margin: 0 10px;
 	position: relative;
 `;
 
@@ -53,11 +52,6 @@ const SubmitButton = styled.button`
     &:focus, &:hover {
         box-shadow: 0 0 0 2px white, 0 0 0 3px #7cccc5;
     }
-`;
-
-const Form = styled.form`
-    width: 1170px;
-    min-width: 375px;
 `;
 
 class ContactForm extends Component {
@@ -130,7 +124,7 @@ class ContactForm extends Component {
 
     render() {
         return(
-            <Form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <FieldSet>
                     <TextInput type={"text"} name={"name"} placeholder={"Namn *"} value={this.state.name} onChange={this.handleChange} />
                     <TextInput type={"email"} name={"email"} placeholder={"E-post *"} value={this.state.email} onChange={this.handleChange} />
@@ -141,7 +135,7 @@ class ContactForm extends Component {
                         <FormMessage showMessage={this.state.showMessage} formMessage={this.state.formMessage} formValid={this.state.formValid} />
                     </div>
                 </FieldSet>
-            </Form>
+            </form>
         );
     }
 };

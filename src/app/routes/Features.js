@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Icon from "../components/Icon";
-import { SectionDiv, Grid, GridCell, Card, TextArea } from "../components/Styled";
+import { SectionDiv, Grid, GridCell, Card, TextArea, size } from "../components/Styled";
 
 const Section = styled.section`
     display: flex;
     align-items: center;
     padding: 50px 0;
     margin-top: -220px;
+    
+    @media (max-width: ${size.small}) {
+        margin: 20px 40px;
+        padding: 0;
+    }
 `;
 
 const GradientPrice = styled.h3`
@@ -37,7 +42,7 @@ class Features extends Component {
     render() {
         return (
             <Section id="features">
-                <SectionDiv border={"bottom"}>
+                <SectionDiv border={"bottom"} responsive={"margin: 20px 0"}>
                     <Grid columns={"1fr 1fr 1fr"} gap={"40px"}>
                         <GridCell>
                             <Card>

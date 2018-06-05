@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, GridCell } from "../components/Styled";
+import { Grid, GridCell, size } from "../components/Styled";
 import ScanMed from "../images/scandinavian-meditation.png";
 import CykelAkuten from "../images/cykelakuten-lund.png";
 
@@ -16,14 +16,22 @@ const Container = styled.div`
     max-width: 1170px;
     margin: 0 auto;
     position: relative;
+    
+    @media (max-width: ${size.small}) {
+        margin: 0 20px;
+    }
 `;
 
 const WhiteReferenceCard = styled(ReferenceCard)`
     background: #fff;
 `;
 
-const Section = styled.div`
+const Section = styled.section`
     margin-bottom: 100px;
+    
+    @media (max-width: ${size.small}) {
+        margin-bottom: 0;
+    }
 `;
 
 const ReadMore = styled.a`

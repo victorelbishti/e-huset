@@ -47,6 +47,8 @@ injectGlobal`
         background-color: rgba(247,247,247,0.9);
     }
     
+    main { position: relative; }
+    
     article, aside, footer, header, nav, section {
         display: block;
     }

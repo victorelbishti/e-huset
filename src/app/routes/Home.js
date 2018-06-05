@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { SectionDiv, Grid, GridCell } from "../components/Styled";
+import {SectionDiv, Grid, GridCell, size} from "../components/Styled";
 import HouseImg from "../images/house.png";
 
 const Section = styled.section`
@@ -20,13 +20,17 @@ const Text = styled.p`
 
 const Image = styled.img`
     width: 250px;
+    
+    @media (max-width: ${size.small}) {
+        width: 150px;
+    }
 `;
 
 class Home extends Component {
     render() {
         return (
             <Section id="home">
-                <SectionDiv>
+                <SectionDiv responsive={"margin: 0 20px; padding-top: 100px"}>
                     <Grid columns={"1fr 1fr"}>
                         <GridCell>
                             <h2>Få ordning på din digitala profil</h2>
@@ -35,7 +39,7 @@ class Home extends Component {
                                 renovering eller några timmar support i månaden så finns vi här för att
                                 hjälpa dig. Scrolla ner för att se våra erbjudanden.</Text>
                         </GridCell>
-                        <GridCell align={"center"}>
+                        <GridCell align={"center"} responsive={"display: none;"}>
                             <Image src={HouseImg} alt={"E-huset.se"} />
                         </GridCell>
                     </Grid>

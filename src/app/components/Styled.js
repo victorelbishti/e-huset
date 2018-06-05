@@ -1,12 +1,22 @@
-
 import styled from 'styled-components';
 
+export const size = {
+    small: '425px',
+    medium: '768px',
+    large: '1170px'
+};
+
 export const SectionDiv = styled.div`
-    max-width: 1170px;
+    max-width: ${size.large};
     margin: 0 auto;
     position: relative;
     border-top: ${props => (props.border == "top") ? `2px solid #eee` : `0`};
     border-bottom: ${props => (props.border == "bottom") ? `2px solid #eee` : `0`};
+    
+    @media (max-width: ${size.small}) {
+        margin: 20px 40px;
+        ${props => props.responsive};
+    }
 `;
 
 export const SectionTitle = styled.h2`
@@ -42,6 +52,10 @@ export const VerticalLine = styled.div`
     ${props => (props.background == 'theme') ? `
     background-image: linear-gradient(-140deg, #2c7dbc 15%, #7cccc5 70%);` : 
     `background: ${props.background}; `}
+    
+    @media (max-width: ${size.small}) {
+        ${props => props.responsive};
+    }
 `;
 
 export const Grid = styled.div`
@@ -55,6 +69,11 @@ export const Grid = styled.div`
     margin: 0;
     vertical-align: top;
     font-size: 0;
+    
+    @media (max-width: ${size.small}) {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
 `;
 
 export const GridCell = styled.div`
@@ -66,6 +85,11 @@ export const GridCell = styled.div`
     font-size: 1.1rem;
     box-sizing: border-box;
     text-align: ${props => (props.align) ? props.align : `left`};
+    
+    @media (max-width: ${size.small}) {
+        padding: 20px 0;
+        ${props => props.responsive};
+    }
 `;
 
 export const Card = styled.div`

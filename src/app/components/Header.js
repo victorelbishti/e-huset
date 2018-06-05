@@ -88,9 +88,7 @@ class Header extends Component {
                             <img src={this.state.scrolling ? Logo : LogoWhite} alt={"E-huset.se"} width={"75"} />
                         </a>
                     </LogoDiv>
-                    <div className={"menu"}>
-                        <Navigation sticky={this.state.scrolling} />
-                    </div>
+                    <Navigation sticky={this.state.scrolling} />
                 </HeaderContainer>
             </HeaderWrapper>
         );
