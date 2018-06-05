@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { SectionDiv, Grid, GridCell, TitleArea, Section } from "../components/Styled";
+import { Section, SectionDiv, SectionTitle, Grid, GridCell, TitleArea } from "../components/Styled";
 import ContactForm from "../components/ContactForm";
 
 class Contact extends Component {
@@ -12,9 +12,10 @@ class Contact extends Component {
                     <Grid columns={"1fr"}>
                         <GridCell padding={"40px 50px 40px 0"}>
                             <TitleArea>
-                                <h2>Kontakta oss</h2>
-                                <h4>Lorum ipsum ac diam sit amet, orum ipsum ac diam sit amet.
-                                    Suspendisse placerat tellus a odio hendrerit, eget dictum enim sollicitudin.</h4>
+                                <SectionTitle>Kontakta oss</SectionTitle>
+                                <h4>Är du intresserad eller vill höra mer om våra tjänster?
+                                    Du är i sådana fall välkommen att slå en signal till Adam
+                                    på <u>+46 (0) 709 515 149</u>, eller skicka ett mail till info@e-huset.se så pratar vi mer!</h4>
                             </TitleArea>
 
                             <ContactForm/>

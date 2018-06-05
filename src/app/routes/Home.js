@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { SectionDiv, Grid, GridCell } from "../components/Styled";
-import Icon from "../components/Icon";
+import HouseImg from "../images/house.png";
 
 const Section = styled.section`
     height: 100vh;
@@ -18,6 +18,10 @@ const Text = styled.p`
     color: #fff;
 `;
 
+const Image = styled.img`
+    width: 250px;
+`;
+
 class Home extends Component {
     render() {
         return (
@@ -31,8 +35,8 @@ class Home extends Component {
                                 renovering eller några timmar support i månaden så finns vi här för att
                                 hjälpa dig. Scrolla ner för att se våra erbjudanden.</Text>
                         </GridCell>
-                        <GridCell>
-                            <Icon icon={"image"} />
+                        <GridCell align={"center"}>
+                            <Image src={HouseImg} alt={"E-huset.se"} />
                         </GridCell>
                     </Grid>
                 </SectionDiv>

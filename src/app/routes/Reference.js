@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, GridCell } from "../components/Styled";
-import Icon from "../components/Icon";
+import ScanMed from "../images/scandinavian-meditation.png";
+import CykelAkuten from "../images/cykelakuten-lund.png";
 
 const ReferenceCard = styled.div`
     background: transparent;
@@ -34,6 +35,10 @@ const ReadMore = styled.a`
     }
 `;
 
+const Image = styled.img`
+    width: 250px;
+`;
+
 class Reference extends Component {
 
     render() {
@@ -42,13 +47,14 @@ class Reference extends Component {
                 <WhiteReferenceCard>
                     <Container>
                         <Grid columns={"1fr 1fr"}>
-                            <GridCell>
-                                <Icon icon={"image"} />
+                            <GridCell align={"center"}>
+                                <Image src={ScanMed} alt={"Scandinavian Meditation"} />
                             </GridCell>
                             <GridCell>
                                 <h2>Scandinavian Meditation</h2>
-                                <p>Curabitur ullamcorper in magna non fringilla. Nam lacus ante, rhoncus non pulvinar sed,
-                                    mattis vel nisi. Nam laoreet enim sit amet dolor egestas, eu vehicula est bibendum.</p>
+                                <p>Scandinavian Meditation är en hemsida som ger verktyg för meditation, mindfulness och stresshantering.
+                                    Vissa av verktygen, som ljudfiler med guidade meditationer, är begränsade till dess betalande användare medan
+                                    andra verktyg för att förmedla tips och idéer, exempelvis bloggen, är öppen för alla besökare.</p>
                                 <ReadMore target={"_blank"} href={"https://scandinavianmeditation.com"}>Besök hemsida</ReadMore>
                             </GridCell>
                         </Grid>
@@ -57,13 +63,13 @@ class Reference extends Component {
                 <ReferenceCard>
                     <Container>
                         <Grid columns={"1fr 1fr"}>
-                            <GridCell>
-                                <Icon icon={"image"} />
+                            <GridCell align={"center"}>
+                                <Image src={CykelAkuten} alt={"Cykelakuten Lund"} />
                             </GridCell>
                             <GridCell>
                                 <h2>Cykelakuten Lund</h2>
-                                <p>Curabitur ullamcorper in magna non fringilla. Nam lacus ante, rhoncus non pulvinar sed,
-                                    mattis vel nisi. Nam laoreet enim sit amet dolor egestas, eu vehicula est bibendum.</p>
+                                <p>Cykelakuten är en mobil cykelreparatör i centrala Lund. Hemsidan visar upp de tjänster
+                                    som dem erbjuder på ett enkelt och stilrent vis. </p>
                                 <ReadMore target={"_blank"} href={"http://cykelakutenlund.se"}>Besök hemsida</ReadMore>
                             </GridCell>
                         </Grid>

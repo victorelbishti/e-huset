@@ -72,9 +72,9 @@ class Features extends Component {
                                 <GradientText>efter överenskommelse</GradientText>
 
                                 <TextArea>
-                                    <p>Skräddarsydd hemsida helt enligt dina villkor. Vill du ha en webbutik eller specifika användarfunktioner
-                                        för dina besökare? Inga problem, förklara vad du behöver så fixar vi det åt dig.
-                                        Pris enligt överenskommelse.</p>
+                                    <p>Skräddarsydd hemsida helt enligt dina villkor. Vill du ha en webbutik eller specifika
+                                        användarfunktioner för dina besökare? Inga problem, förklara vad du behöver så
+                                        fixar vi det åt dig.</p>
                                 </TextArea>
 
                             </Card>

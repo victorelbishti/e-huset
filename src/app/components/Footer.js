@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, SectionDiv, GridCell, VerticalLine } from "./Styled";
+import { Grid, SectionDiv, GridCell, VerticalLine, WhiteLink } from "./Styled";
 
 const Footer = styled.footer`
     display: flex;
@@ -42,7 +42,7 @@ class Header extends Component {
                 <SectionDiv>
                     <Grid columns={"1fr 1fr"}>
                         <GridCell padding={"40px 50px 40px 0"}>
-                            <h3>Vivamus suscipit tortor eget felis porttitor volutpat.</h3>
+                            <h3>Få ordning på din digitala profil</h3>
                         </GridCell>
                         <GridCell padding={"40px 0 40px 50px"}>
                             <VerticalLine background={"#fff"} side={"left"}/>
@@ -52,12 +52,12 @@ class Header extends Component {
                             </FooterCard>
                             <FooterCard marginTop={"40px"}>
                                 <h4>TELEFON</h4>
-                                <p>+46 (0) 701 234 567</p>
+                                <p>+46 (0) 709 515 149</p>
                             </FooterCard>
                         </GridCell>
                     </Grid>
                     <FooterDiv>
-                        <p>E-huset.se Copyright</p>
+                        <p>Copyright 2018 <WhiteLink href="http://e-huset.se/">E-huset.se</WhiteLink> | All Rights Reserved</p>
                     </FooterDiv>
                 </SectionDiv>
             </Footer>

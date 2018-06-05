@@ -9,6 +9,20 @@ export const SectionDiv = styled.div`
     border-bottom: ${props => (props.border == "bottom") ? `2px solid #eee` : `0`};
 `;
 
+export const SectionTitle = styled.h2`
+    font-size: 42px;
+    letter-spacing: 1px;
+    
+    &:after {
+        content: "";
+        display: block;
+        margin: 30px auto;
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(to right, #2c7dbc, #7cccc5);
+    }
+`;
+
 export const VerticalLine = styled.div`
     position: absolute;
     margin-top: 10px;
@@ -51,6 +65,7 @@ export const GridCell = styled.div`
     display: inline-block;
     font-size: 1.1rem;
     box-sizing: border-box;
+    text-align: ${props => (props.align) ? props.align : `left`};
 `;
 
 export const Card = styled.div`
@@ -78,10 +93,20 @@ export const TitleArea = styled.div`
 export const TextArea = styled.div`
     font-family: Proxima-Nova-Light;
     text-align: center;
+    max-width: 768px;
 `;
 
 export const Section = styled.section`
     display: flex;
     align-items: center;
     padding: 0;
+`;
+
+export const WhiteLink = styled.a`
+    color: #fff;
+    text-decoration: underline;
+    
+    &:focus, &:hover {
+        text-decoration: none;
+    }
 `;

@@ -50,7 +50,8 @@ const NavLink = styled.a`
 
 const navItems = {
     features: 'Våra paket',
-    references: 'Referenser',
+    about: 'Vad gör vi?',
+    reference: 'Tidigare projekt',
     contact: 'Kontakta oss'
 };
 

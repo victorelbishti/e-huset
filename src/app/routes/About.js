@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Section, SectionDiv, Grid, GridCell, TitleArea, TextArea } from "../components/Styled";
+import { Section, SectionDiv, SectionTitle, Grid, GridCell, TitleArea, TextArea } from "../components/Styled";
 
 class About extends Component {
 
@@ -8,16 +8,25 @@ class About extends Component {
             <Section id="about">
                 <SectionDiv>
                     <Grid>
-                        <GridCell padding={"120px 0 100px 0"}>
+                        <GridCell padding={"60px 0 100px 0"}>
                             <TitleArea>
-                                <h2>Om E-huset</h2>
+                                <SectionTitle>Om oss</SectionTitle>
                             </TitleArea>
                             <TextArea>
-                                <p>Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci
-                                luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel,
-                                ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam
-                                id dui posuere blandit.</p>
+                                <p>Bakom e-huset står Victor och Adam, två studenter med ett brinnande intresse
+                                    för webbutveckling och digital kommunikation. Vi vill hjälpa er som av
+                                    olika anledningar inte har tid eller möjlighet att bygga och/eller
+                                    underhålla en hemsida.</p>
+
+                                <p>“Gör en egen hemsida på 10 minuter!” brukar det kunna låta,
+                                    men detta förutsätter oftast att du innehar diverse förkunskaper.
+                                    Att outsourca detta via oss innebär att du som företagare frigör en
+                                    massa tid för dig och din personal.</p>
+
+                                <p>Att få ordning på sin digitala profil handlar om mycket mer än att
+                                    bara ha en hemsida och är ett arbete som tar tid. Vi erbjuder därför
+                                    ytterligare tjänster som sökoptimering, digital marknadsföring och
+                                    annonsering i sökmotorer.</p>
                             </TextArea>
                         </GridCell>
                     </Grid>
