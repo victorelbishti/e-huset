@@ -7,6 +7,7 @@ import Modal from "./Modal";
 
 export const navItems = {
     features: 'Våra paket',
+    services: 'Support- & Serviceavtal',
     about: 'Om oss',
     reference: 'Tidigare projekt',
     contact: 'Kontakta oss'
@@ -109,6 +110,7 @@ const MobileNav = styled.div`
     z-index: 90;
     color: #fff;
     background: rgba(0,0,0,.75);
+    overflow-y: scroll;
     
     > ul {
         text-align: center;

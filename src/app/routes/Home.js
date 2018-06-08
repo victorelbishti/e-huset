@@ -7,10 +7,19 @@ const Section = styled.section`
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(-140deg, #2c7dbc 15%, #7cccc5 70%);
+    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
     
     h2 {
         color: #ffffff;
+    }
+    
+    @media screen and (orientation:landscape)
+    and (min-device-width: ${size.small}) 
+    and (max-device-width: ${size.medium}) {
+       
+       > div > div > div:last-of-type {
+            display: none;
+       }
     }
 `;
 
@@ -44,6 +53,16 @@ const List = styled.ul`
     padding: 0;
     width: 350px;
     margin: 0 auto;
+    
+    @media only screen and (max-width: ${size.medium}) and (min-width: ${size.small}) {
+        width: auto;
+    }
+    
+    @media screen and (orientation:landscape)
+    and (min-device-width: ${size.small}) 
+    and (max-device-width: ${size.medium}) {
+       display: none;
+    }
 `;
 
 class Home extends Component {

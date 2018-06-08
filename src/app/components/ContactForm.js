@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import FormMessage from "./FormMessage";
+import { Button } from "./Styled";
 
 const FieldSet = styled.fieldset`
 	border: 0 none;
@@ -35,23 +36,6 @@ padding: 15px;
 	color: #2C3E50;
 	font-size: 13px;
     height: 200px;
-`;
-
-const SubmitButton = styled.button`
-    width: 100px;
-	background: #7cccc5;
-	font-weight: bold;
-	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;
-    font-family: Proxima-Nova-Light;
-    
-    &:focus, &:hover {
-        box-shadow: 0 0 0 2px white, 0 0 0 3px #7cccc5;
-    }
 `;
 
 class ContactForm extends Component {
@@ -129,7 +113,7 @@ class ContactForm extends Component {
                     <TextInput type={"text"} name={"name"} placeholder={"Namn *"} value={this.state.name} onChange={this.handleChange} />
                     <TextInput type={"email"} name={"email"} placeholder={"E-post *"} value={this.state.email} onChange={this.handleChange} />
                     <TextArea name={"message"} placeholder={"Meddelande"} value={this.state.message} onChange={this.handleChange} />
-                    <SubmitButton type={"submit"}>Skicka</SubmitButton>
+                    <Button type={"submit"}>Skicka</Button>
 
                     <div>
                         <FormMessage showMessage={this.state.showMessage} formMessage={this.state.formMessage} formValid={this.state.formValid} />

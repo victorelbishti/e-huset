@@ -11,6 +11,7 @@ import Features from "../routes/Features";
 import About from "../routes/About";
 import Reference from "../routes/Reference";
 import Contact from "../routes/Contact";
+import Services from "../routes/Services";
 
 
 class Layout extends Component {
@@ -21,6 +22,7 @@ class Layout extends Component {
                 <main id={"main"}>
                     <Home />
                     <Features />
+                    <Services/>
                     <About />
                     <Reference />
                     <Contact />
