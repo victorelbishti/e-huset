@@ -7,7 +7,7 @@ const Section = styled.section`
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
+    background-image: linear-gradient(0deg, #2c7dbc 15%, #7cccc5 70%);
     
     h2 {
         color: #ffffff;
@@ -25,14 +25,6 @@ const Section = styled.section`
 
 const Text = styled.p`
     color: #fff;
-`;
-
-const Image = styled.img`
-    width: 250px;
-    
-    @media (max-width: ${size.small}) {
-        width: 150px;
-    }
 `;
 
 const ListItem = styled.li`
@@ -66,6 +58,7 @@ const List = styled.ul`
 `;
 
 class Home extends Component {
+
     render() {
         return (
             <Section id="home">

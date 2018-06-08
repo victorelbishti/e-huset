@@ -5,7 +5,7 @@ import { Grid, SectionDiv, GridCell, VerticalLine, WhiteLink } from "./Styled";
 const Footer = styled.footer`
     display: flex;
     align-items: center;
-    background-image: linear-gradient(-140deg, #2c7dbc 15%, #7cccc5 70%);
+    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
     padding: 100px 0 20px 0;
     color: #FFF;
 `;

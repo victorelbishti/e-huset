@@ -83,7 +83,7 @@ class Header extends Component {
         return (
             <HeaderWrapper sticky={this.state.scrolling}>
                 <HeaderContainer>
-                    <LogoDiv className={"logo"}>
+                    <LogoDiv>
                         <a href={"/"}>
                             <img src={this.state.scrolling ? Logo : LogoWhite} alt={"E-huset.se"} width={"75"} />
                         </a>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Icon from "../components/Icon";
 import { SectionDiv, Grid, GridCell, Card, TextArea, Button, size } from "../components/Styled";
 import Scroll from "smoothscroll";
+import AOS from "aos";
 
 const Section = styled.section`
     display: flex;
@@ -52,6 +53,14 @@ class Features extends Component {
         this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
+    componentDidMount(){
+        AOS.init();
+    }
+
+    componentWillReceiveProps (){
+        AOS.refresh();
+    }
+
     handleButtonClick() {
         let element = document.querySelector('#contact');
         let offset = element.offsetTop - 100;
@@ -63,7 +72,7 @@ class Features extends Component {
             <Section id="features">
                 <SectionDiv responsive={"margin: 20px 0"}>
                     <Grid columns={"1fr 1fr 1fr"} gap={"40px"}>
-                        <GridCell>
+                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
                             <Card>
                                 <Icon icon="lightning" />
                                 <h2>Webbplats - Basic</h2>
@@ -77,7 +86,7 @@ class Features extends Component {
                                 <Button onClick={this.handleButtonClick}>Beställ nu</Button>
                             </Card>
                         </GridCell>
-                        <GridCell>
+                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
                             <Card>
                                 <Icon icon="star" />
                                 <h2>Webbplats - Pro</h2>
@@ -90,7 +99,7 @@ class Features extends Component {
                                 <Button onClick={this.handleButtonClick}>Beställ nu</Button>
                             </Card>
                         </GridCell>
-                        <GridCell>
+                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
                             <Card>
                                 <Icon icon="configure" />
                                 <h2>Webbplats - Anpassad</h2>

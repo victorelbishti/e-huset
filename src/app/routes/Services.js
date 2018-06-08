@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Icon from "../components/Icon";
 import {SectionDiv, SectionTitle, Grid, GridCell, TitleArea, ServiceCard, size, colors} from "../components/Styled";
 import styled from "styled-components";
+import AOS from "aos";
 
 let services = {
     0: {
@@ -18,7 +19,7 @@ let services = {
     },
     2: {
         title: "Uppdateringar av programvara",
-        text: `Varje månad uppdaterar vi WordPress, WordPress temat och alla
+        text: `Varje månad uppdaterar vi WordPress, temat och alla
                     tillägg som är installerade på er webbplats för att minimera
                     risken för intrång.`,
         icon: "update"
@@ -64,25 +65,6 @@ const Textbox = styled.div`
     transition: all .7s cubic-bezier(0.4, 0.25, 0, 1);
     overflow: hidden;
     box-sizing: border-box;
-`;
-
-const Button = styled.button`
-    cursor: pointer;
-    background: ${colors.light};
-    width: 100px;
-    border-radius: 3px;
-    border: 0;
-    outline: none;
-    padding: 8px 10px;
-    color: #FFF;
-    line-height: 20px;
-    font-size: 12px;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
-    margin: 20px 50px;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
 `;
 
 const ToggleContainer = styled.div`
@@ -143,6 +125,14 @@ class Services extends Component {
         this.handleToggle = this.handleToggle.bind(this);
     }
 
+    componentDidMount(){
+        AOS.init();
+    }
+
+    componentWillReceiveProps (){
+        AOS.refresh();
+    }
+
     handleToggle(index) {
 
         let { toggled } = this.state.data[index];
@@ -167,7 +157,7 @@ class Services extends Component {
         return (
             <Section id="services">
                 <SectionDiv responsive={"margin: 20px 0"}>
-                    <TitleArea>
+                    <TitleArea data-aos={"fade-up"}>
                         <SectionTitle color={"#fff"}>Support- & Serviceavtal</SectionTitle>
                     </TitleArea>
                     <Grid columns={"1fr 1fr 1fr"} gap={"20px"}>
@@ -175,8 +165,9 @@ class Services extends Component {
                         {
                             Object.entries(this.state.data).map((item, i) => {
                                 item = item[1];
+                                let even = (i % 2 == 0) ? true : false;
                                 return(
-                                    <GridCell key={i} padding={"0"}>
+                                    <GridCell data-aos={"fade-" + (even ? "right" : "left")} key={i} padding={"0"}>
                                         <ServiceCard>
                                             <div>
                                                 <div>
