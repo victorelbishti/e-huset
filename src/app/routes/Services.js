@@ -5,42 +5,6 @@ import {SectionDiv, SectionTitle, Grid, GridCell, TitleArea, ServiceCard, size, 
 import styled from "styled-components";
 import AOS from "aos";
 
-let services = {
-    0: {
-        title: "Utbildning",
-        text: `Vi visar er hur ni själva kan ta hand om er hemsida.`,
-        icon: "computer",
-        toggled: false
-    },
-    1: {
-        title: "Telefon & mailsupport",
-        text: `Behöver ni hjälp med att uppdatera hemsidan så är det bara att slå en signal eller maila.`,
-        icon: "support"
-    },
-    2: {
-        title: "Uppdateringar av programvara",
-        text: `Varje månad uppdaterar vi WordPress, temat och alla
-                    tillägg som är installerade på er webbplats för att minimera
-                    risken för intrång.`,
-        icon: "update"
-    },
-    3: {
-        title: "Licenskostnaden",
-        text: `Vi står för licenskostnaden för det WordPress-tema vi byggt er hemsida med.`,
-        icon: "credit_card"
-    },
-    4: {
-        title: "Backup / Säkerhetskopiering",
-        text: `Backup av er hemsida varje månad. Alla backuper lagras i 90 dagar.`,
-        icon: "upload"
-    },
-    5: {
-        title: "Säkerhetskontroll",
-        text: `Varje dag kontrolleras hemsidan efter skadlig kod och andra sårbarheter.`,
-        icon: "shield"
-    }
-};
-
 const Section = styled.section`
     display: flex;
     align-items: center;
@@ -48,8 +12,8 @@ const Section = styled.section`
     background: #2c7dbc;
     
     @media (max-width: ${size.small}) {
-        margin: 20px 40px;
-        padding: 0;
+        margin: 0;
+        padding: 20px 40px;
     }
 `;
 
@@ -137,17 +101,15 @@ class Services extends Component {
 
         let { toggled } = this.state.data[index];
 
-        console.log(toggled);
-
         if( toggled ) {
 
             this.setState(state => {
-                state.data[index].toggled = false
+                state.data[index].toggled = false;
                 return state;
             });
         } else {
             this.setState(state => {
-                state.data[index].toggled = true
+                state.data[index].toggled = true;
                 return state;
             });
         }

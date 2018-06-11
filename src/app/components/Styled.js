@@ -35,6 +35,7 @@ export const SectionDiv = styled.div`
 export const SectionTitle = styled.h2`
     font-size: 42px;
     letter-spacing: 1px;
+    line-height: 50px;
     color: ${props => props.color};
     
     &:after {
