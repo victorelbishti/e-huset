@@ -190,6 +190,14 @@ class Navigation extends Component {
 
         return (
             <Nav>
+
+                <MobileIconContainer sticky={this.props.sticky}>
+                    <a href={"#"} onClick={this.handleShow}>
+                        <Icon icon={"hamburger"} />
+                    </a>
+                </MobileIconContainer>
+                {modal}
+
                 <ul>
                     {
                         Object.keys(navItems).map((item, i) => {
@@ -202,12 +210,6 @@ class Navigation extends Component {
                         })
                     }
                 </ul>
-                <MobileIconContainer sticky={this.props.sticky}>
-                    <a href={"#"} onClick={this.handleShow}>
-                        <Icon icon={"hamburger"} />
-                    </a>
-                </MobileIconContainer>
-                {modal}
             </Nav>
         );
     }

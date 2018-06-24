@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Grid, GridCell, size } from "../components/Styled";
 import ScanMed from "../images/scandinavian-meditation.png";
-import CykelAkuten from "../images/cykelakuten-lund.png";
+import CykelAkuten from "../images/cykelakuten.png";
 
 const ReferenceCard = styled.div`
     background: transparent;

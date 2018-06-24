@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import {SectionDiv, Grid, GridCell, size} from "../components/Styled";
 import Icon from "../components/Icon";
+import ImgSrc from "../images/E-Huset_Displays.png";
+import Scroll from "smoothscroll";
 
 const Section = styled.section`
     height: 100vh;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(0deg, #2c7dbc 15%, #7cccc5 70%);
+    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
+    
     
     h2 {
         color: #ffffff;
@@ -43,7 +46,6 @@ const ListItem = styled.li`
 
 const List = styled.ul`
     padding: 0;
-    width: 350px;
     margin: 0 auto;
     
     @media only screen and (max-width: ${size.medium}) and (min-width: ${size.small}) {
@@ -57,12 +59,61 @@ const List = styled.ul`
     }
 `;
 
+const Image = styled.img`
+    max-width: 585px;
+    width: 100%;
+    
+    @media (max-width: ${size.small}) {
+        display: none;
+    }
+`;
+
+const ActionContainer = styled.div`
+    margin: 0 auto;
+    text-align: center;
+    
+    > div {
+        display: inline-block;
+        margin: 20px 30px;
+        cursor: pointer;
+        
+        span {
+            text-align: center;
+            color: #fff;
+        }
+        
+        &:last-of-type svg {
+            transform: rotate(-90deg);
+        }
+    }
+    
+    svg {
+        fill: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+`;
+
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(elementName){
+        let element = document.querySelector('#' + elementName);
+        let offset = element.offsetTop - 100;
+        Scroll(offset, 1000);
+    }
 
     render() {
         return (
             <Section id="home">
-                <SectionDiv responsive={"margin: 0 20px; padding-top: 100px"}>
+                <SectionDiv responsive={"margin: 0; padding: 100px 20px 0 20px"}>
                     <Grid columns={"1fr 1fr"}>
                         <GridCell responsive={"padding: 0"}>
                             <h2>Få ordning på din digitala profil</h2>
@@ -72,26 +123,26 @@ class Home extends Component {
                                 hjälpa dig. Scrolla ner för att se våra erbjudanden.</Text>
                         </GridCell>
                         <GridCell responsive={"padding: 0"}>
-                            <List>
-                                <ListItem>
-                                    <span><Icon size={"2em"} icon={"checkmark"} /></span>
-                                    <span>Responsiva hemsidor</span>
-                                </ListItem>
-                                <ListItem>
-                                    <span><Icon size={"2em"} icon={"checkmark"} /></span>
-                                    <span>Löpande underhåll</span>
-                                </ListItem>
-                                <ListItem>
-                                    <span><Icon size={"2em"} icon={"checkmark"} /></span>
-                                    <span>Sökoptimering</span>
-                                </ListItem>
-                                <ListItem>
-                                    <span><Icon size={"2em"} icon={"checkmark"} /></span>
-                                    <span>Digital marknadsföring</span>
-                                </ListItem>
-                            </List>
+                            <Image src={ImgSrc} alt={"E-huset.se"} />
                         </GridCell>
                     </Grid>
+                    <ActionContainer>
+
+                        <div>
+                            <a href={"#"} onClick={ () => this.handleClick('features') }>
+                                <Icon icon={"chevronDown"} size={"3em"} />
+                                <span>Se vad vi gör</span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href={"#"} onClick={ () => this.handleClick('contact') }>
+                                <Icon icon={"chevronDown"} size={"3em"} />
+                                <span>Kontakta oss</span>
+                            </a>
+                        </div>
+
+                    </ActionContainer>
                 </SectionDiv>
             </Section>
         );

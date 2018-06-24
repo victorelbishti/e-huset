@@ -11,6 +11,7 @@ const HeaderWrapper = styled.header`
     left: 0;
     right: 0;
     z-index: 50;
+    width: 100vw;
     
     &:before {
         content: '';

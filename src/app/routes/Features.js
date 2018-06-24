@@ -9,17 +9,11 @@ const Section = styled.section`
     display: flex;
     align-items: center;
     padding: 50px 0;
-    margin-top: -220px;
+    margin-top: 20px;
     
-    @media (max-width: ${size.small}) {
+    @media (max-width: ${size.medium}) {
         margin: 20px 40px;
         padding: 0;
-    }
-    
-    @media screen and (orientation:landscape)
-    and (min-device-width: ${size.small}) 
-    and (max-device-width: ${size.medium}) {
-       margin-top: 0;
     }
 `;
 

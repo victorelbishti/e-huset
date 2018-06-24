@@ -13,6 +13,7 @@ export const colors = {
 
 export const SectionDiv = styled.div`
     max-width: ${size.large};
+    width: 100%;
     margin: 0 auto;
     position: relative;
     border-top: ${props => (props.border == "top") ? `2px solid #eee` : `0`};
@@ -84,7 +85,7 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: ${props => props.columns ? props.columns : `1fr`};
     grid-gap: ${props => props.gap ? props.gap : `0`};
-    align-items: center;
+    align-items: ${props => props.align ? props.align : `center`};
     list-style: none;
     padding: 0;
     margin: 0;
@@ -150,6 +151,10 @@ export const Card = styled.div`
         min-height: 550px;
     }
     
+    @media (max-width: ${size.medium}) {
+        margin: 0;
+    }
+    
     @media screen and (orientation:landscape)
     and (min-device-width: ${size.small}) 
     and (max-device-width: ${size.medium}) {
@@ -171,6 +176,10 @@ export const ServiceCard = styled.div`
             display: block;
             height: 3em;
             text-align: center;
+            
+            @media (max-width: ${size.medium}) {
+                text-align: left;
+            }
                         
             svg { 
                 fill: #fff; 

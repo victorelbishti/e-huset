@@ -24,7 +24,7 @@ const Textbox = styled.div`
     color:#FFF;
     width: 100%;
     margin: 10px 0;
-    height: ${props => props.toggled ? `200px` : `0`};
+    height: ${props => props.toggled ? `160px` : `0`};
     padding: ${props => props.toggled ? `20px` : `0 20px`};
     transition: all .7s cubic-bezier(0.4, 0.25, 0, 1);
     overflow: hidden;
@@ -122,7 +122,7 @@ class Services extends Component {
                     <TitleArea data-aos={"fade-up"}>
                         <SectionTitle color={"#fff"}>Support- & Serviceavtal</SectionTitle>
                     </TitleArea>
-                    <Grid columns={"1fr 1fr 1fr"} gap={"20px"}>
+                    <Grid columns={"1fr 1fr 1fr"} gap={"20px"} align={"start"}>
 
                         {
                             Object.entries(this.state.data).map((item, i) => {

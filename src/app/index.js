@@ -47,7 +47,7 @@ injectGlobal`
         background-color: rgba(247,247,247,0.9);
     }
     
-    main { position: relative; }
+    main { position: relative; overflow-x: hidden; }
     
     article, aside, footer, header, nav, section {
         display: block;
@@ -60,6 +60,8 @@ injectGlobal`
     h4, h5, h6 {
         font-family: 'Proxima-Nova-Light', sans-serif;
     }
+    
+    ul { -webkit-padding-start: 0; }
     
     a {
         text-decoration: none;
