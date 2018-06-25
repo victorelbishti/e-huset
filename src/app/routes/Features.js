@@ -1,42 +1,29 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Icon from "../components/Icon";
-import { SectionDiv, Grid, GridCell, Card, TextArea, Button, size } from "../components/Styled";
+import { Grid, ReferenceCard, WhiteReferenceCard, Container, SectionTitle, GridCell, Card, TitleArea, TextArea, Button, size, colors } from "../components/Styled";
 import Scroll from "smoothscroll";
 import AOS from "aos";
+import ImgSrc from "../images/E-Huset_Displays.png";
 
 const Section = styled.section`
-    display: flex;
-    align-items: center;
-    padding: 50px 0;
-    margin-top: 20px;
-    
-    @media (max-width: ${size.medium}) {
-        margin: 20px 40px;
-        padding: 0;
-    }
+    margin: 20px 0;
 `;
 
-const GradientPrice = styled.h3`
-    font-size: 42px;
-    color: #2aa380;
-    margin-bottom: 10px;
-    line-height: 1em;
+const Image = styled.img`
+    width: 100%;
+    max-width: 550px;
+`;
+
+const RowTitle = styled.h2`
+    font-size: 32px;
+    line-height: 1.2em;
+`;
+
+const Text = styled.p`
+    font-size: 20px;
+    line-height: 1.5em;
     font-family: Proxima-Nova-Light;
-    background: linear-gradient(to bottom right, #2c7dbc, #7cccc5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-`;
-
-const GradientText = styled.h6`
-    font-size: 14px;
-    color: #2aa380;
-    margin: 0 0 20px 0;
-    line-height: 1em;
-    font-family: Proxima-Nova;
-    background: linear-gradient(to bottom right, #2c7dbc, #7cccc5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 `;
 
 class Features extends Component {
@@ -55,8 +42,8 @@ class Features extends Component {
         AOS.refresh();
     }
 
-    handleButtonClick() {
-        let element = document.querySelector('#contact');
+    handleButtonClick(elementName) {
+        let element = document.querySelector('#' + elementName);
         let offset = element.offsetTop - 100;
         Scroll(offset, 1000);
     }
@@ -64,52 +51,50 @@ class Features extends Component {
     render() {
         return (
             <Section id="features">
-                <SectionDiv responsive={"margin: 20px 0"}>
-                    <Grid columns={"1fr 1fr 1fr"} gap={"40px"}>
-                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                            <Card>
-                                <Icon icon="lightning" />
-                                <h2>Webbplats - Basic</h2>
-                                <GradientPrice>5 995kr</GradientPrice>
-                                <GradientText>ex. moms</GradientText>
-                                <TextArea divider={"theme"}>
-                                    <p>Basic, det snabba, moderna och smidiga alternativet för dig som vill ha en enkel,
-                                        stilren och responsiv hemsida. Perfekt för att väcka intresse hos besökaren och
-                                        inleda en kundkontakt.</p>
-                                </TextArea>
-                                <Button onClick={this.handleButtonClick}>Beställ nu</Button>
-                            </Card>
-                        </GridCell>
-                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                            <Card>
-                                <Icon icon="star" />
-                                <h2>Webbplats - Pro</h2>
-                                <GradientPrice>9 995kr</GradientPrice>
-                                <GradientText>ex. moms</GradientText>
-                                <TextArea divider={"theme"}>
-                                    <p>Pro, en hemsida med upp till 10 landningssidor. Passar för dig som är i
-                                        behov av en bredare presentation av ditt företag eller organisation.</p>
-                                </TextArea>
-                                <Button onClick={this.handleButtonClick}>Beställ nu</Button>
-                            </Card>
-                        </GridCell>
-                        <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                            <Card>
-                                <Icon icon="configure" />
-                                <h2>Webbplats - Anpassad</h2>
-                                <GradientPrice>Offert</GradientPrice>
-                                <GradientText>efter överenskommelse</GradientText>
+                <ReferenceCard>
+                    <Container>
+                        <TitleArea>
+                            <SectionTitle>Fokusera det du är bra på, låt oss ta hand om din IT</SectionTitle>
+                            <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och digital marknadsföring.
+                                Oavsett om du är i behov av en ny hemsida, en digital renovering eller några timmar
+                                support i månaden så finns vi här för att hjälpa dig.</Text>
+                        </TitleArea>
+                    </Container>
+                </ReferenceCard>
 
-                                <TextArea divider={"theme"}>
-                                    <p>Skräddarsydd hemsida helt enligt dina villkor. Vill du ha en webbutik eller specifika
-                                        användarfunktioner för dina besökare? Inga problem, förklara vad du behöver så
-                                        fixar vi det åt dig.</p>
-                                </TextArea>
-                                <Button onClick={this.handleButtonClick}>Beställ nu</Button>
-                            </Card>
-                        </GridCell>
-                    </Grid>
-                </SectionDiv>
+                <WhiteReferenceCard>
+                    <Container>
+                        <Grid columns={"1fr 1fr"} gap={"20px"}>
+                            <GridCell>
+                                <RowTitle>Webbdesign & -utveckling</RowTitle>
+                                <p>Alla våra projekt skapas med en personlig och modern
+                                    design som fungerar lika bra på datorn som i mobilen.</p>
+                                <Button onClick={ () => this.handleButtonClick('packages') }>Se våra paket</Button>
+                            </GridCell>
+                            <GridCell>
+                                <Image src={ImgSrc} alt={"E-huset.se"} />
+                            </GridCell>
+                        </Grid>
+                    </Container>
+                </WhiteReferenceCard>
+
+                <ReferenceCard>
+                    <Container>
+                        <Grid columns={"1fr 1fr"} gap={"20px"}>
+                            <GridCell align={"center"}>
+                                <Icon icon={"upload"} fill={colors.light} />
+                                <RowTitle>Säker hosting</RowTitle>
+                                <p>Tillåt oss att ta hand om din hemsida med säker hosting från ett av Sveriges bästa webbhotell.</p>
+                            </GridCell>
+
+                            <GridCell align={"center"}>
+                                <Icon icon={"analytics"} fill={colors.light} />
+                                <RowTitle>Statistik</RowTitle>
+                                <p>Behöver du få statistik över besökare och trafik på din webbplats? Inga problem.</p>
+                            </GridCell>
+                        </Grid>
+                    </Container>
+                </ReferenceCard>
             </Section>
         );
     }

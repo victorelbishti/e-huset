@@ -14,6 +14,7 @@ export const colors = {
 export const SectionDiv = styled.div`
     max-width: ${size.large};
     width: 100%;
+    z-index: 1001;
     margin: 0 auto;
     position: relative;
     border-top: ${props => (props.border == "top") ? `2px solid #eee` : `0`};
@@ -47,6 +48,17 @@ export const SectionTitle = styled.h2`
         height: 2px;
         background: ${props => (props.color) ? props.color : `linear-gradient(to right, #2c7dbc, #7cccc5)`};
     }
+`;
+
+export const Overlay = styled.div`
+    position: absolute;
+    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
+    opacity: .5;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
 `;
 
 export const VerticalLine = styled.div`
@@ -168,14 +180,23 @@ export const ServiceCard = styled.div`
     margin: .5rem 0 1rem 0;
     
     > div {
-        padding: 24px;
+        padding: 10px 24px;
         border-radius: 0 0 2px 2px;
         color: #fff;
+        
+        p {
+            font-family: Proxima-Nova-Light;
+        }
+        
+        span {
+            display: block;
+            font-size: 18px;
+            font-weight: 900;
+        }
         
         > div:first-of-type {
             display: block;
             height: 3em;
-            text-align: center;
             
             @media (max-width: ${size.medium}) {
                 text-align: left;
@@ -188,10 +209,7 @@ export const ServiceCard = styled.div`
                 vertical-align: middle;
              }
             
-            span {
-                display: inline;
-                margin-left: 15px;
-            }
+            
         }      
     }
 `;
@@ -259,5 +277,27 @@ export const Button = styled.button`
     
     &:focus, &:hover {
         box-shadow: 0 0 0 2px white, 0 0 0 3px #7cccc5;
+    }
+`;
+
+export const ReferenceCard = styled.div`
+    background: transparent;
+    -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+    padding: 65px 10px;
+    width: 100%;
+`;
+
+export const WhiteReferenceCard = styled(ReferenceCard)`
+    background: #fff;
+`;
+
+export const Container = styled.div`
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    
+    @media (max-width: ${size.small}) {
+        margin: 0 20px;
     }
 `;

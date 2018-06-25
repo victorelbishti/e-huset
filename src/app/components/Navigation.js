@@ -6,9 +6,9 @@ import Icon from "./Icon";
 import Modal from "./Modal";
 
 export const navItems = {
-    features: 'Våra paket',
+    features: 'Vad vi gör',
+    packages: 'Våra paket',
     services: 'Support- & Serviceavtal',
-    about: 'Om oss',
     reference: 'Tidigare projekt',
     contact: 'Kontakta oss'
 };

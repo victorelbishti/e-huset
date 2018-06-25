@@ -1,30 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, GridCell, size } from "../components/Styled";
+import { Grid, GridCell, ReferenceCard, WhiteReferenceCard, Container, size } from "../components/Styled";
 import ScanMed from "../images/scandinavian-meditation.png";
 import CykelAkuten from "../images/cykelakuten.png";
-
-const ReferenceCard = styled.div`
-    background: transparent;
-    -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
-    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
-    padding: 65px 10px;
-    width: 100%;
-`;
-
-const Container = styled.div`
-    max-width: 1170px;
-    margin: 0 auto;
-    position: relative;
-    
-    @media (max-width: ${size.small}) {
-        margin: 0 20px;
-    }
-`;
-
-const WhiteReferenceCard = styled(ReferenceCard)`
-    background: #fff;
-`;
 
 const Section = styled.section`
     margin-bottom: 100px;

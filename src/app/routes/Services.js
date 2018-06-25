@@ -1,15 +1,18 @@
 
 import React, { Component } from "react";
 import Icon from "../components/Icon";
-import {SectionDiv, SectionTitle, Grid, GridCell, TitleArea, ServiceCard, size, colors} from "../components/Styled";
+import {SectionDiv, SectionTitle, Grid, GridCell, TitleArea, ServiceCard, Overlay, size, colors} from "../components/Styled";
 import styled from "styled-components";
 import AOS from "aos";
+import bgImg from "../images/bg-photo.jpeg"
 
 const Section = styled.section`
     display: flex;
     align-items: center;
+    position: relative;
     padding: 50px 0;
-    background: #2c7dbc;
+    background: url(${bgImg}) no-repeat center center fixed;
+    background-size: cover;
     
     @media (max-width: ${size.small}) {
         margin: 0;
@@ -17,25 +20,16 @@ const Section = styled.section`
     }
 `;
 
-const Textbox = styled.div`
-    
-    top: 100%;
-    z-index: ${props => props.toggled ? `100` : `0`};s
-    color:#FFF;
+const PhotoOverlay = styled(Overlay)`
+    height: 100%;
     width: 100%;
-    margin: 10px 0;
-    height: ${props => props.toggled ? `160px` : `0`};
-    padding: ${props => props.toggled ? `20px` : `0 20px`};
-    transition: all .7s cubic-bezier(0.4, 0.25, 0, 1);
-    overflow: hidden;
-    box-sizing: border-box;
+    background: #000;
+    opacity: .7;
 `;
 
-const ToggleContainer = styled.div`
-    float: right;
-    margin-top: .8em;
-    
-    svg { fill: #fff; }
+const FilterOverlay = styled(Overlay)`
+    height: 100%;
+    width: 100%;
 `;
 
 class Services extends Component {
@@ -47,7 +41,7 @@ class Services extends Component {
             data: {
                 0: {
                     title: "Utbildning",
-                    text: `Vi visar er hur ni själva kan ta hand om er hemsida.`,
+                    text: `Vi guidar och förklarar hur du enkelt kan ta hand om er hemsida och byta ut innehåll.`,
                     icon: "computer",
                     toggled: false
                 },
@@ -59,7 +53,7 @@ class Services extends Component {
                 },
                 2: {
                     title: "Uppdateringar av programvara",
-                    text: `Varje månad uppdaterar vi WordPress, WordPress temat och alla
+                    text: `Varje månad uppdaterar vi WordPress, temat och de
                     tillägg som är installerade på er webbplats för att minimera
                     risken för intrång.`,
                     icon: "update",
@@ -118,6 +112,8 @@ class Services extends Component {
     render() {
         return (
             <Section id="services">
+                <PhotoOverlay/>
+                <FilterOverlay />
                 <SectionDiv responsive={"margin: 20px 0"}>
                     <TitleArea data-aos={"fade-up"}>
                         <SectionTitle color={"#fff"}>Support- & Serviceavtal</SectionTitle>
@@ -127,21 +123,12 @@ class Services extends Component {
                         {
                             Object.entries(this.state.data).map((item, i) => {
                                 item = item[1];
-                                let even = (i % 2 == 0) ? true : false;
                                 return(
-                                    <GridCell data-aos={"fade-" + (even ? "right" : "left")} key={i} padding={"0"}>
+                                    <GridCell data-aos={"fade-up"} key={i} padding={"0"}>
                                         <ServiceCard>
                                             <div>
-                                                <div>
-                                                    <Icon size={"3em"} icon={item.icon} />
-                                                    <span>{item.title}</span>
-                                                    <ToggleContainer onClick={ () => this.handleToggle(i) }>
-                                                        <Icon  size={"1em"} icon={this.state.data[i].toggled ? "minus" : "plus"} />
-                                                    </ToggleContainer>
-                                                </div>
-                                                <Textbox id={"textbox-" + i} toggled={this.state.data[i].toggled}>
-                                                    <p>{item.text}</p>
-                                                </Textbox>
+                                                <span>{item.title}</span>
+                                                <p>{item.text}</p>
                                             </div>
                                         </ServiceCard>
                                     </GridCell>

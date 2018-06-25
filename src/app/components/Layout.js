@@ -8,10 +8,10 @@ import Footer from "./Footer";
 // Routes
 import Home from "../routes/Home";
 import Features from "../routes/Features";
-import About from "../routes/About";
 import Reference from "../routes/Reference";
 import Contact from "../routes/Contact";
 import Services from "../routes/Services";
+import Packages from "../routes/Packages";
 
 
 class Layout extends Component {
@@ -22,8 +22,8 @@ class Layout extends Component {
                 <main id={"main"}>
                     <Home />
                     <Features />
+                    <Packages/>
                     <Services/>
-                    <About />
                     <Reference />
                     <Contact />
                 </main>

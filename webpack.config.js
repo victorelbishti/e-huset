@@ -39,7 +39,7 @@ var config =  {
                 ]
             },
             {
-                test: /\.(png|jpg|gif|svg|woff|woff2|eot|ttf|otf)$/,
+                test: /\.(png|jpg|jpeg|gif|mp4|svg|woff|woff2|eot|ttf|otf)$/,
                 use: [
                     {
                         loader: 'url-loader',

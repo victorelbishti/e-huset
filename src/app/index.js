@@ -8,6 +8,7 @@ import { injectGlobal } from "styled-components";
 import ProximaNova from "./fonts/ProximaNova-Regular.otf";
 import ProximaNovaBold from "./fonts/ProximaNova-Extrabold.otf";
 import ProximaNovaLight from "./fonts/ProximaNova-Light.otf";
+import Simplifica from "./fonts/simplifica.otf";
 
 injectGlobal`
     * {
@@ -27,6 +28,11 @@ injectGlobal`
     @font-face {
         font-family: 'Proxima-Nova-Light';
         src: url(${ProximaNovaLight}) format('opentype');
+    }
+    
+    @font-face {
+        font-family: 'Simplifica';
+        src: url(${Simplifica}) format('opentype');
     }
     
     html {
