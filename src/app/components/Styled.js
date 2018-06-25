@@ -54,7 +54,7 @@ export const Overlay = styled.div`
     position: absolute;
     background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
     opacity: .5;
-    height: 100vh;
+    height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
     width: 100%;
     z-index: 1000;
     top: 0;

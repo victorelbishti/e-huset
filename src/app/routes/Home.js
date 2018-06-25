@@ -6,7 +6,7 @@ import Scroll from "smoothscroll";
 import BgVideo from "../images/bgvideo.mp4";
 
 const Section = styled.section`
-    height: 100vh;
+    height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
     display: flex;
     align-items: center;
     background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);    
@@ -57,7 +57,7 @@ const VideoContainer = styled.div`
     display: block;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
     overflow: hidden;
     
     @media (max-width: ${size.large}) {
@@ -81,7 +81,12 @@ class Home extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            videoHeight: 0
+        };
+
         this.handleClick = this.handleClick.bind(this);
+        this.updateDimensions = this.updateDimensions.bind(this);
     }
 
     handleClick(elementName){
@@ -90,11 +95,33 @@ class Home extends Component {
         Scroll(offset, 1000);
     }
 
+    updateDimensions() {
+
+        let height = document.getElementById('bgvid').clientHeight;
+        let h2 = document.getElementById('bgvid').offsetHeight;
+        let h3 = document.getElementById('bgvid').scrollHeight;
+
+        if (typeof height == 'undefined') {
+            height = h2;
+        } else if (typeof h2 == 'undefined') {
+            height = h3;
+        }
+
+        this.setState({videoHeight: height});
+    }
+    componentDidMount() {
+        this.updateDimensions();
+        window.addEventListener("resize", this.updateDimensions);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
+
     render() {
         return (
-            <Section id="home">
-                <Overlay />
-                <VideoContainer>
+            <Section height={this.state.videoHeight} id="home">
+                <Overlay height={this.state.videoHeight} />
+                <VideoContainer height={this.state.videoHeight}>
                     <Video id="bgvid" playsinline autoPlay muted loop>
                         <source src={BgVideo} type="video/mp4" />
                     </Video>
