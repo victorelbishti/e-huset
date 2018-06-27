@@ -7,9 +7,9 @@ class Contact extends Component {
     render() {
         return (
             <Section id="contact">
-                <SectionDiv border={"top"} responsive={"margin: 0 20px; padding: 45px 0"}>
+                <SectionDiv responsive={"margin: 0 20px; padding: 45px 0"}>
                     <Grid columns={"1fr"}>
-                        <GridCell padding={"40px 50px 40px 0"}>
+                        <GridCell padding={"10px 50px 40px 0"}>
                             <TitleArea>
                                 <SectionTitle>Kontakta oss</SectionTitle>
                                 <h4>Är du intresserad eller vill höra mer om våra tjänster?

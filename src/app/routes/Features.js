@@ -26,6 +26,13 @@ const Text = styled.p`
     font-family: Proxima-Nova-Light;
 `;
 
+const CallToAction = styled(Button)`
+    line-height: 1.4em;
+    width: 80%;
+    text-transform: uppercase;
+    padding: 15px 10px;
+`;
+
 class Features extends Component {
 
     constructor(props) {
@@ -58,6 +65,7 @@ class Features extends Component {
                             <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och digital marknadsföring.
                                 Oavsett om du är i behov av en ny hemsida, en digital renovering eller några timmar
                                 support i månaden så finns vi här för att hjälpa dig.</Text>
+                            <CallToAction onClick={ () => this.handleButtonClick('contact') }>Beställ gratis demohemsida</CallToAction>
                         </TitleArea>
                     </Container>
                 </ReferenceCard>

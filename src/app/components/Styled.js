@@ -282,8 +282,7 @@ export const Button = styled.button`
 
 export const ReferenceCard = styled.div`
     background: transparent;
-    -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
-    clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 8%, 100% 96%, 0% 100%);
     padding: 65px 10px;
     width: 100%;
 `;

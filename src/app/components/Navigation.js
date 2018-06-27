@@ -92,7 +92,7 @@ const MobileIconContainer = styled.div`
 `;
 
 const ModalIconContainer = styled(MobileIconContainer)`
-    position: absolute;
+    position: fixed ;
     right: 50px;
     top: 45px;
     
@@ -107,7 +107,7 @@ const MobileNav = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 90;
+    z-index: 10000;
     color: #fff;
     background: rgba(0,0,0,.75);
     overflow-y: scroll;
