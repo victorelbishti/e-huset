@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, GridCell, TitleArea, SectionTitle, Container, size } from "../components/Styled";
+import { Grid, GridCell, TitleArea, SectionTitle, SectionSubTitle, Container, size } from "../components/Styled";
 import Icon from "../components/Icon";
 
 // Images
@@ -231,8 +231,8 @@ class Reference extends Component {
             <Section id="reference">
                 <TitleArea>
                     <SectionTitle>Tidigare projekt</SectionTitle>
-                    <Text>Nedan visar vi ett axplock från ett antal responsiva hemsidor som vi tidigare
-                        har arbetat med.</Text>
+                    <SectionSubTitle>Nedan visar vi ett axplock från ett antal responsiva hemsidor som vi tidigare
+                        har arbetat med.</SectionSubTitle>
                 </TitleArea>
 
                 <Wrapper>
