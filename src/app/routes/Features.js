@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Icon from "../components/Icon";
-import { Grid, ReferenceCard, WhiteReferenceCard, Container, SectionTitle, GridCell, Card, TitleArea, TextArea, Button, size, colors } from "../components/Styled";
+import { Grid, ReferenceCard, WhiteReferenceCard, Container, SectionTitle, SectionSubTitle, GridCell, TitleArea, Button, colors } from "../components/Styled";
 import Scroll from "smoothscroll";
 import AOS from "aos";
 import ImgSrc from "../images/E-Huset_Displays.png";
@@ -61,11 +61,11 @@ class Features extends Component {
                 <ReferenceCard>
                     <Container>
                         <TitleArea>
-                            <SectionTitle>Fokusera det du är bra på, låt oss ta hand om din IT</SectionTitle>
-                            <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och digital marknadsföring.
+                            <SectionTitle>Låt oss ta hand om din IT</SectionTitle>
+                                <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och webbdesign.
                                 Oavsett om du är i behov av en ny hemsida, en digital renovering eller några timmar
                                 support i månaden så finns vi här för att hjälpa dig.</Text>
-                            <CallToAction onClick={ () => this.handleButtonClick('contact') }>Beställ gratis demohemsida</CallToAction>
+                            <CallToAction onClick={ () => this.handleButtonClick('contact') }>Beställ en gratis demohemsida</CallToAction>
                         </TitleArea>
                     </Container>
                 </ReferenceCard>

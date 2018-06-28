@@ -35,9 +35,10 @@ export const SectionDiv = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-    font-size: 42px;
+    font-size: 38px;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 50px;
+    line-height: 1.2em;
     color: ${props => props.color};
     
     &:after {
@@ -48,6 +49,17 @@ export const SectionTitle = styled.h2`
         height: 2px;
         background: ${props => (props.color) ? props.color : `linear-gradient(to right, #2c7dbc, #7cccc5)`};
     }
+    
+    @media (max-width: ${size.small}) {
+        font-size: 30px;
+    }
+`;
+
+export const SectionSubTitle = styled.h3`
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 2px;    
+    color: #ccc;
 `;
 
 export const Overlay = styled.div`

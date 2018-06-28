@@ -32,6 +32,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
     "npm": "^5.10.0",
+    "react-rotating-text": "^1.2.1",
     "smoothscroll": "^0.4.0",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",

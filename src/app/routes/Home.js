@@ -1,15 +1,24 @@
+
+// Modules
 import React, { Component } from "react";
 import styled from "styled-components";
-import {SectionDiv, TitleArea, SectionTitle, Overlay, size} from "../components/Styled";
-import Icon from "../components/Icon";
 import Scroll from "smoothscroll";
+import ReactRotatingText from 'react-rotating-text';
+
+// Components & Styles
+import Icon from "../components/Icon";
+import {SectionDiv, TitleArea, SectionTitle, Overlay, size} from "../components/Styled";
+
+// Images
 import BgVideo from "../images/bgvideo.mp4";
+import VideoPoster from "../images/video-poster.png";
 
 const Section = styled.section`
     height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
     display: flex;
     align-items: center;
-    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);    
+    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
+    overflow: hidden; 
     
     h2 {
         color: #ffffff;
@@ -23,6 +32,11 @@ const Section = styled.section`
             display: none;
        }
     }
+`;
+
+const HomeSectionDiv = styled(SectionDiv)`
+    padding: 140px 0 40px 0;
+    text-align: center;
 `;
 
 const ActionContainer = styled.div`
@@ -61,7 +75,12 @@ const VideoContainer = styled.div`
     overflow: hidden;
     
     @media (max-width: ${size.large}) {
-        display: none;
+        background: url(${VideoPoster}) no-repeat center center;
+        background-size: cover;
+        
+        video {
+            display: none;
+        }
     }
 `;
 
@@ -74,6 +93,21 @@ const Video = styled.video`
 
 const MainTitle = styled(SectionTitle)`
     font-size: 52px;
+    line-height: 1.2em;
+    text-transform: none;
+    letter-spacing: 2px
+    font-family: Proxima-Nova-Light;
+    
+    @media (max-width: ${size.small}) {
+        font-size: 30px;
+    }
+`;
+
+const RotationWords = styled.span`
+    position: relative;
+    display: block;
+    font-family: Proxima-Nova-Bold;
+    padding-left: 10px;
 `;
 
 class Home extends Component {
@@ -122,15 +156,18 @@ class Home extends Component {
             <Section height={this.state.videoHeight} id="home">
                 <Overlay height={this.state.videoHeight} />
                 <VideoContainer height={this.state.videoHeight}>
-                    <Video id="bgvid" playsinline autoPlay muted loop>
+                    <Video poster={VideoPoster} id="bgvid" playsinline autoPlay muted loop>
                         <source src={BgVideo} type="video/mp4" />
                     </Video>
                 </VideoContainer>
 
-                <SectionDiv responsive={"margin: 0; padding: 100px 20px 0 20px"}>
-                    <TitleArea>
-                        <MainTitle color={"#fff"}>Få ordning på din digitala profil</MainTitle>
-                    </TitleArea>
+                <HomeSectionDiv responsive={"margin: 0; padding: 100px 20px 0 20px"}>
+                    <MainTitle color={"#fff"}>
+                        Vi hjälper ditt företag med
+                        <RotationWords>
+                            <ReactRotatingText items={['Webbdeisgn', 'Webbutveckling', 'Sökoptimering', 'WordPress']} />
+                        </RotationWords>
+                    </MainTitle>
                     <ActionContainer>
 
                         <div>
@@ -148,7 +185,7 @@ class Home extends Component {
                         </div>
 
                     </ActionContainer>
-                </SectionDiv>
+                </HomeSectionDiv>
             </Section>
         );
     }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, GridCell, TitleArea, SectionTitle, Container, size, colors } from "../components/Styled";
+import { Grid, GridCell, TitleArea, SectionTitle, Container, size } from "../components/Styled";
 import Icon from "../components/Icon";
 
 // Images
@@ -238,11 +238,11 @@ class Reference extends Component {
                 <Wrapper>
                     <FadedBorder />
                     <NavContainer>
-                        <NavItem direction={'left'} onClick={ () => this.updateActiveItem(this.state.activeItem - 1) }>
-                            <Icon icon={"chevronUp"} />
+                        <NavItem direction={'left'}onClick={ () => this.updateActiveItem(this.state.activeItem - 1) }>
+                            <Icon size={"3em"} icon={"chevronUp"} />
                         </NavItem>
                         <NavItem direction={'right'} onClick={ () => this.updateActiveItem(this.state.activeItem + 1) }>
-                            <Icon icon={"chevronUp"} />
+                            <Icon size={"3em"} icon={"chevronUp"} />
                         </NavItem>
                     </NavContainer>
                     {
