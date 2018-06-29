@@ -25,7 +25,7 @@ const GradientPrice = styled.h3`
 `;
 
 const GradientText = styled.h6`
-    font-size: 14px;
+    font-size: 18px;
     color: #2aa380;
     margin: 0 0 20px 0;
     line-height: 1em;
@@ -65,27 +65,27 @@ class Packages extends Component {
                         <Card>
                             <Icon icon="lightning" />
                             <h2>Webbplats - Basic</h2>
-                            <GradientPrice>5 995kr</GradientPrice>
-                            <GradientText>ex. moms</GradientText>
+                            <GradientPrice>5 995 kr</GradientPrice>
+                            <GradientText>Underhåll: 800 kr/månad</GradientText>
                             <TextArea divider={"theme"}>
-                                                <p>Basic, det snabba, moderna och smidiga alternativet för dig som vill ha en enkel,
-                                                    stilren och responsiv hemsida. Perfekt för att väcka intresse hos besökaren och
-                                                    inleda en kundkontakt.</p>
-                                            </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                                <p>Basic, det snabba, moderna och smidiga alternativet för dig som vill ha en enkel,
+                                    stilren och responsiv hemsida. Perfekt för att väcka intresse hos besökaren och
+                                    inleda en kundkontakt.</p>
+                            </TextArea>
+                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
                         </Card>
                     </GridCell>
                     <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
                         <Card>
                             <Icon icon="star" />
                             <h2>Webbplats - Pro</h2>
-                            <GradientPrice>9 995kr</GradientPrice>
-                            <GradientText>ex. moms</GradientText>
+                            <GradientPrice>9 995 kr</GradientPrice>
+                            <GradientText>Underhåll: 800 kr/månad</GradientText>
                             <TextArea divider={"theme"}>
-                                                <p>Pro, en hemsida med upp till 10 landningssidor. Passar för dig som är i
-                                                    behov av en bredare presentation av ditt företag eller organisation.</p>
+                                <p>Pro, en hemsida med upp till 10 landningssidor. Passar för dig som är i
+                                    behov av en bredare presentation av ditt företag eller organisation.</p>
                                             </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
                         </Card>
                     </GridCell>
                     <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
@@ -100,7 +100,7 @@ class Packages extends Component {
                                                     användarfunktioner för dina besökare? Inga problem, förklara vad du behöver så
                                                     fixar vi det åt dig.</p>
                                             </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
                         </Card>
                     </GridCell>
                 </Grid>

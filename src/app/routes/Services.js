@@ -40,9 +40,9 @@ class Services extends Component {
         this.state = {
             data: {
                 0: {
-                    title: "Utbildning",
-                    text: `Vi guidar och förklarar hur du enkelt kan ta hand om er hemsida och byta ut innehåll.`,
-                    icon: "computer",
+                    title: "Licenskostnader",
+                    text: `Vi står för alla licenskostnader (teman, tillägg etc) som behövs för att bygga och driva er hemsida.`,
+                    icon: "credit_card",
                     toggled: false
                 },
                 1: {
@@ -55,19 +55,19 @@ class Services extends Component {
                     title: "Uppdateringar av programvara",
                     text: `Varje månad uppdaterar vi WordPress, temat och de
                     tillägg som är installerade på er webbplats för att minimera
-                    risken för intrång.`,
+                    risken för buggar och intrång.`,
                     icon: "update",
                     toggled: false
                 },
                 3: {
-                    title: "Licenskostnaden",
-                    text: `Vi står för licenskostnaden för det WordPress-tema vi byggt er hemsida med.`,
-                    icon: "credit_card",
+                    title: "Utbildning",
+                    text: `Vi guidar och förklarar hur du enkelt kan ta hand om er hemsida och byta ut innehåll.`,
+                    icon: "computer",
                     toggled: false
                 },
                 4: {
                     title: "Backup / Säkerhetskopiering",
-                    text: `Backup av er hemsida varje månad. Alla backuper lagras i 90 dagar.`,
+                    text: `Backups av er hemsida sker varje månad. Alla backuper lagras i 90 dagar.`,
                     icon: "upload",
                     toggled: false
                 },

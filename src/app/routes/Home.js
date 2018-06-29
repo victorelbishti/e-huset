@@ -165,7 +165,7 @@ class Home extends Component {
                     <MainTitle color={"#fff"}>
                         Vi hjälper ditt företag med
                         <RotationWords>
-                            <ReactRotatingText items={['Webbdeisgn', 'Webbutveckling', 'Sökoptimering', 'WordPress']} />
+                            <ReactRotatingText items={['Webbdesign', 'Webbutveckling', 'Sökoptimering', 'WordPress']} />
                         </RotationWords>
                     </MainTitle>
                     <ActionContainer>
