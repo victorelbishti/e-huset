@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Scroll from "smoothscroll";
-import { size } from "./Styled";
+import { size, colors } from "./Styled";
 import Icon from "./Icon";
 import Modal from "./Modal";
 
@@ -50,7 +50,7 @@ const NavLink = styled.a`
     transition: all 0.4s cubic-bezier(0.4, 0.25, 0, 1);
     
     &:hover {
-        ${props => props.sticky ? `color: #2c7dbc;` : `color: #fff;`}
+        ${props => props.sticky ? `color: ${colors.fresh};` : `color: #fff;`}
                 
         &:before {
             margin-top: 5px;
@@ -67,7 +67,7 @@ const NavLink = styled.a`
         height: 3px;
         margin-top: 25px;
         opacity: 0;
-        ${props => props.sticky ? `background-color: #2c7dbc;` : `background-color: #fff;`}
+        ${props => props.sticky ? `background-color: ${colors.fresh};` : `background-color: #fff;`}
         transition: all 0.5s cubic-bezier(0.4, 0.25, 0, 1);
     }
 `;

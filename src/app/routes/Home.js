@@ -7,7 +7,7 @@ import ReactRotatingText from 'react-rotating-text';
 
 // Components & Styles
 import Icon from "../components/Icon";
-import {SectionDiv, TitleArea, SectionTitle, Overlay, size} from "../components/Styled";
+import {SectionDiv, SectionTitle, Overlay, size, colors} from "../components/Styled";
 
 // Images
 import BgVideo from "../images/bgvideo.mp4";
@@ -59,10 +59,10 @@ const ActionContainer = styled.div`
     }
     
     svg {
-        fill: #fff;
+        fill: ${colors.citrus};
         margin-bottom: 10px;
         padding: 10px;
-        border: 3px solid #fff;
+        border: 3px solid ${colors.citrus};
         border-radius: 50%;
     }
 `;

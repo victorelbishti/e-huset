@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+// background: ${props => (props.color) ? props.color : `linear-gradient(to right, #2c7dbc, #7cccc5)`};
+
 export const size = {
     small: '425px',
     medium: '769px',
@@ -8,8 +10,28 @@ export const size = {
 
 export const colors = {
     light: '#7cccc5',
-    dark:  '#2c7dbc'
+    dark:  '#2c7dbc',
+    blueberry: '#6B7A8F',
+    blueberry_light: '#53868f',
+    apricot: '#F7882F',
+    citrus: '#F7C331',
+    apple: '#DCC7AA',
+    fresh: '#4ABDAC',
+    vermillion: '#FC4A1A',
+    sunshine: '#F7B733',
+    clean: '#DFDCE3'
 };
+
+export const Overlay = styled.div`
+    position: absolute;
+    background-image: linear-gradient(rgb(107,122,143) 15%, rgb(83,134,143) 70%);
+    opacity: .5;
+    height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+`;
 
 export const SectionDiv = styled.div`
     max-width: ${size.large};
@@ -23,10 +45,6 @@ export const SectionDiv = styled.div`
     @media (max-width: ${size.small}) {
         margin: 20px 40px;
         ${props => props.responsive};
-    }
-    
-    @media only screen and (max-width: ${size.medium}) and (min-width: ${size.small}) {
-        margin: 0 40px;
     }
     
     @media only screen and (max-width: ${size.large}) and (min-width: ${size.medium}) {
@@ -47,7 +65,8 @@ export const SectionTitle = styled.h2`
         margin: 30px auto;
         width: 100px;
         height: 2px;
-        background: ${props => (props.color) ? props.color : `linear-gradient(to right, #2c7dbc, #7cccc5)`};
+        background: ${props => (props.color) ? props.color : colors.citrus};
+       
     }
     
     @media (max-width: ${size.small}) {
@@ -57,20 +76,8 @@ export const SectionTitle = styled.h2`
 
 export const SectionSubTitle = styled.h3`
     font-size: 18px;
-    font-style: italic;
-    letter-spacing: 2px;    
-    color: #ccc;
-`;
-
-export const Overlay = styled.div`
-    position: absolute;
-    background-image: linear-gradient(180deg, #2c7dbc 15%, #7cccc5 70%);
-    opacity: .5;
-    height: ${props => (props.height == '0' || !props.height) ? '100vh' : props.height + 'px' };
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    left: 0;
+    letter-spacing: 2px;
+    font-family: Proxima-Nova;
 `;
 
 export const VerticalLine = styled.div`
@@ -118,7 +125,6 @@ export const Grid = styled.div`
     
     @media (max-width: ${size.small}) {
         grid-template-columns: 1fr;
-        grid-gap: 10px;
     }
     
     @media only screen and (max-width: ${size.medium}) and (min-width: ${size.small}) {
@@ -135,7 +141,6 @@ export const Grid = styled.div`
 export const GridCell = styled.div`
     width: 100%;
     padding: ${props => props.padding ? props.padding : `40px 0`};
-    text-align: left;
     position: relative;
     display: inline-block;
     font-size: 1.1rem;
@@ -154,35 +159,23 @@ export const GridCell = styled.div`
     }
 `;
 
-export const Card = styled.div`
-    padding: 50px 20px;
-    margin-bottom: 30px;
+export const Package = styled.div`
+    padding: 0 0 10px 0;
     text-align: center;
     border-radius: 3px;
-    background-color: #ffffff;
+    background-color: #fff;
     box-shadow: 0 0 0 0 transparent;
     transition: all 0.4s cubic-bezier(0.4, 0.25, 0, 1);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    margin: 10px 0;
     
     &:hover {
         box-shadow: 0 0 20px 0px rgba(0,0,0,0.05);
-    }
-    
-    @media only screen and (max-width: ${size.medium}) and (min-width: ${size.small}) {
-        min-height: 600px;
-    }
-    
-    @media only screen and (max-width: ${size.large}) and (min-width: ${size.medium}) {
-        min-height: 550px;
-    }
-    
-    @media (max-width: ${size.medium}) {
-        margin: 0;
-    }
-    
-    @media screen and (orientation:landscape)
-    and (min-device-width: ${size.small}) 
-    and (max-device-width: ${size.medium}) {
-       min-height: auto;
     }
 `;
 
@@ -264,9 +257,10 @@ export const Section = styled.section`
     padding: 0;
 `;
 
-export const WhiteLink = styled.a`
-    color: #fff;
+export const Link = styled.a`
+    color: ${props => (props.color) ? props.color : `#333`};
     text-decoration: underline;
+    font-family: Proxima-Nova-Bold;
     
     &:focus, &:hover {
         text-decoration: none;
@@ -275,7 +269,7 @@ export const WhiteLink = styled.a`
 
 export const Button = styled.button`
     width: 200px;
-	background: #7cccc5;
+	background: ${colors.fresh};
 	outline: none;
 	font-weight: bold;
 	font-size: 18px;
@@ -288,19 +282,19 @@ export const Button = styled.button`
     font-family: Proxima-Nova-Light;
     
     &:focus, &:hover {
-        box-shadow: 0 0 0 2px white, 0 0 0 3px #7cccc5;
+        box-shadow: 0 0 0 2px white, 0 0 0 3px ${colors.fresh};
     }
 `;
 
 export const ReferenceCard = styled.div`
     background: transparent;
-    clip-path: polygon(0 0%, 100% 8%, 100% 96%, 0% 100%);
     padding: 65px 10px;
     width: 100%;
 `;
 
-export const WhiteReferenceCard = styled(ReferenceCard)`
+export const CustomReferenceCard = styled(ReferenceCard)`
     background: #fff;
+    padding: 0 40px;
 `;
 
 export const Container = styled.div`

@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import { Section, SectionDiv, SectionTitle, Grid, GridCell, TitleArea } from "../components/Styled";
+import styled from "styled-components";
 import ContactForm from "../components/ContactForm";
+
+const ConstactSection = styled(Section)`
+    padding-top: 60px;
+`;
 
 class Contact extends Component {
 
     render() {
         return (
-            <Section id="contact">
+            <ConstactSection id="contact">
                 <SectionDiv responsive={"margin: 0 20px; padding: 45px 0"}>
                     <Grid columns={"1fr"}>
                         <GridCell padding={"10px 50px 40px 0"}>
@@ -20,7 +25,7 @@ class Contact extends Component {
                         </GridCell>
                     </Grid>
                 </SectionDiv>
-            </Section>
+            </ConstactSection>
         );
     }
 }

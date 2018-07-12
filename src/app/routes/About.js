@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Section, SectionDiv, SectionTitle, Grid, GridCell, TitleArea, TextArea } from "../components/Styled";
 
+
+
 class About extends Component {
 
     render() {

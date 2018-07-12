@@ -3,9 +3,10 @@ import AOS from "aos";
 import Scroll from "smoothscroll";
 import Icon from "../components/Icon";
 import styled from "styled-components";
-import { SectionDiv, Grid, GridCell, Card, TextArea, Button, size, colors } from "../components/Styled";
+import { SectionDiv, Grid, Package, Button, Link, size, colors } from "../components/Styled";
 
 const Section = styled.section`
+    padding: 70px 0 100px 0;
     
     @media (max-width: ${size.medium}) {
         margin: 20px 40px;
@@ -15,24 +16,74 @@ const Section = styled.section`
 
 const GradientPrice = styled.h3`
     font-size: 42px;
-    color: #2aa380;
+    color: ${colors.blueberry_light};
     margin-bottom: 10px;
     line-height: 1em;
     font-family: Proxima-Nova-Light;
-    background: linear-gradient(to bottom right, #2c7dbc, #7cccc5);
+    background: linear-gradient(to bottom right, ${colors.blueberry}, ${colors.blueberry_light});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 `;
 
 const GradientText = styled.h6`
     font-size: 18px;
-    color: #2aa380;
+    color: ${colors.fresh};
     margin: 0 0 20px 0;
     line-height: 1em;
     font-family: Proxima-Nova;
-    background: linear-gradient(to bottom right, #2c7dbc, #7cccc5);
+    background: linear-gradient(to bottom right, ${colors.blueberry}, ${colors.blueberry_light});
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+`;
+
+const Price = styled.h3`
+    font-size: 42px;
+    margin: 30px 0 10px 0;
+    color: #fff;
+    font-family: Proxima-Nova-Light;
+`;
+
+const RecurringPrice = styled.h4`
+    font-size: 18px;
+    color: #fff;
+    margin: 0 0 20px 0;
+    font-family: Proxima-Nova;
+`;
+
+const PackageDetails = styled.div`
+    background: ${colors.fresh};
+    padding: 20px 10px;
+    border-radius: 3px;
+    color: #fff;
+`;
+
+const PackageName = styled.div`
+    background: ${colors.light};
+    padding: 20px 10px;
+    border-radius: 3px;
+`;
+
+const List = styled.ul`
+    list-style: none;
+`;
+
+const ListItem = styled.li`
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 0;
+    
+    &:nth-child(even) {
+        background: #fafafa;
+    }
+    
+    svg {
+        display: inline;
+        vertical-align: text-bottom;
+        margin: 0 25px 0 20px;
+    }
+`;
+
+const PackageDescription = styled.div`
+    padding: 0 20px;
 `;
 
 class Packages extends Component {
@@ -59,53 +110,138 @@ class Packages extends Component {
     render() {
         return (
             <Section id={"packages"}>
-            <SectionDiv responsive={"margin: 20px 0"}>
-                <Grid columns={"repeat(auto-fill,minmax(270px,1fr))"} gap={"40px"}>
-                    <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                        <Card>
-                            <Icon icon="lightning" />
-                            <h2>Webbplats - Basic</h2>
-                            <GradientPrice>5 995 kr</GradientPrice>
-                            <GradientText>Underhåll: 800 kr/månad</GradientText>
-                            <TextArea divider={"theme"}>
-                                <p>Basic, det snabba, moderna och smidiga alternativet för dig som vill ha en enkel,
-                                    stilren och responsiv hemsida. Perfekt för att väcka intresse hos besökaren och
-                                    inleda en kundkontakt.</p>
-                            </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
-                        </Card>
-                    </GridCell>
-                    <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                        <Card>
-                            <Icon icon="star" />
-                            <h2>Webbplats - Pro</h2>
-                            <GradientPrice>9 995 kr</GradientPrice>
-                            <GradientText>Underhåll: 800 kr/månad</GradientText>
-                            <TextArea divider={"theme"}>
-                                <p>Pro, en hemsida med upp till 10 landningssidor. Passar för dig som är i
-                                    behov av en bredare presentation av ditt företag eller organisation.</p>
-                                            </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
-                        </Card>
-                    </GridCell>
-                    <GridCell data-aos={"zoom-in"} data-aos-duration={"600"}>
-                        <Card>
-                            <Icon icon="configure" />
-                            <h2>Webbplats - Anpassad</h2>
-                            <GradientPrice>Offert</GradientPrice>
-                            <GradientText>efter överenskommelse</GradientText>
+                <SectionDiv responsive={"margin: 20px 0"}>
+                    <Grid columns={"repeat(auto-fill,minmax(270px,1fr))"} gap={"40px"}>
+                        <Package data-aos={"zoom-in"} data-aos-duration={"600"}>
+                            <PackageDetails>
+                                <PackageName>
+                                    <h2>Webbplats - Basic</h2>
+                                </PackageName>
+                                <Price>9 995 kr</Price>
+                                <RecurringPrice>Underhåll: 795 kr/månad</RecurringPrice>
+                            </PackageDetails>
 
-                            <TextArea divider={"theme"}>
-                                                <p>Skräddarsydd hemsida helt enligt dina villkor. Vill du ha en webbutik eller specifika
-                                                    användarfunktioner för dina besökare? Inga problem, förklara vad du behöver så
-                                                    fixar vi det åt dig.</p>
-                                            </TextArea>
-                            <Button onClick={ () => this.handleButtonClick('services') }>Vad ingår?</Button>
-                        </Card>
-                    </GridCell>
-                </Grid>
-            </SectionDiv>
-        </Section>
+                            <List>
+                                <ListItem>
+                                    <span>6 månader gratis <Link href={"#"} onClick={ () => this.handleButtonClick('services') }>underhåll</Link>
+                                    </span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Utveckling & programmering</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Skräddarsydd design</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Responsiv / mobilanpassad</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Lansering</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>One-pager</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>------</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>------</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>------</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>------</span>
+                                </ListItem>
+                            </List>
+                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                        </Package>
+                        <Package data-aos={"zoom-in"} data-aos-duration={"600"}>
+
+                            <PackageDetails>
+                                <PackageName>
+                                    <h2>Webbplats - Pro</h2>
+                                </PackageName>
+                                <Price>14 995 kr</Price>
+                                <RecurringPrice>Underhåll: 795 kr/månad</RecurringPrice>
+                            </PackageDetails>
+
+                            <List>
+                                <ListItem>
+                                    <span>1 år gratis <Link href={"#"} onClick={ () => this.handleButtonClick('services') }>underhåll</Link>
+                                    </span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Utveckling & programmering</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Skräddarsydd design</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Responsiv / mobilanpassad</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Lansering</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>1-10 undersidor</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Sökoptimering (SEO)</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Besöksstatistik</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Fri & säker hosting</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>SSL-certifikat (HTTPS)</span>
+                                </ListItem>
+                            </List>
+                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                        </Package>
+                        <Package data-aos={"zoom-in"} data-aos-duration={"600"}>
+
+                            <PackageDetails>
+                                <PackageName>
+                                    <h2>Webbplats - Anpassad</h2>
+                                </PackageName>
+                                <Price>Offert</Price>
+                                <RecurringPrice>efter överenskommelse</RecurringPrice>
+                            </PackageDetails>
+
+                            <List>
+                                <ListItem>
+                                    <span>Responsiv / mobilanpassad</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Utveckling & programmering</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Skräddarsydd design</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Sökoptimering (SEO)</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Besöksstatistik</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Fri & säker hosting</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>SSL-certifikat (HTTPS)</span>
+                                </ListItem>
+                            </List>
+                            <PackageDescription>
+                                <p>Skräddarsydd hemsida helt enligt dina villkor. Vill du ha en webbutik eller specifika användarfunktioner för dina besökare? Inga problem, förklara vad du behöver så fixar vi det åt dig.</p>
+                            </PackageDescription>
+                            <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
+                        </Package>
+                    </Grid>
+                </SectionDiv>
+            </Section>
         );
     }
 }

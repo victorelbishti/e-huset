@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, GridCell, TitleArea, SectionTitle, SectionSubTitle, Container, size } from "../components/Styled";
+import { Grid, GridCell, TitleArea, SectionTitle, SectionSubTitle, Container, size, colors } from "../components/Styled";
 import Icon from "../components/Icon";
 
 // Images
-import ScandinavianMeditationImage from "../images/scandinavian-meditation-multiscreens.png";
-import EuManagementImage from "../images/eu-management.png";
-import BosbecImage from "../images/bosbec-multiscreens.png";
+import ScandinavianMeditationImage from "../images/responsive-scandinavian-meditation.jpg";
+import EuManagementImage from "../images/responsive-eumanagement.jpg";
+import BosbecImage from "../images/responsive-bosbec.jpg";
 
 const Section = styled.section`
-    padding: 50px 0;
+    padding: 50px 0 20px 0;
+    background: #fff;
     
     @media (max-width: ${size.small}) {
         margin-bottom: 0;
@@ -37,7 +38,9 @@ const Wrapper = styled.div`
     height: 100%;
     min-height: 455px;
     overflow: hidden;
-    background: #e8e8e8;
+    background: #fff;
+    margin-top: 40px;
+    padding: 20px 0 20px 0;
     
     &:after { 
        content: " ";
@@ -62,6 +65,10 @@ const Item = styled.div`
 
 const NavContainer = styled.div`
     width: 100%;
+    
+    @media (max-width: ${size.medium}) {
+        display: none;
+    }
 `;
 
 const NavItem = styled.div`
@@ -107,12 +114,6 @@ const ItemTitle = styled.h2`
     }
 `;
 
-const Text = styled.p`
-    font-size: 20px;
-    line-height: 1.5em;
-    font-family: Proxima-Nova-Light;
-`;
-
 const DotNavigationWrapper = styled.div`
     margin: 0 auto;
     text-align: center;
@@ -145,13 +146,11 @@ const Link = styled.a`
 	outline: none;
 	border-radius: 50%;
 	background-color: #fff;
-	background-color: rgba(255,255,255,0.3);
 	text-indent: -999em;
 	cursor: pointer;
 	position: absolute;
 	overflow: hidden;
-	background-color: rgba(0,0,0,0);
-	box-shadow: inset 0 0 0 2px rgba(255,255,255,1);
+	box-shadow: inset 0 0 0 2px rgb(247, 195, 49, 1);
 	transition: background 0.3s;
 	
 	&:after {
@@ -161,13 +160,13 @@ const Link = styled.a`
         height: ${props => (props.current) ? '100%' : '0'};
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: ${colors.citrus};
         box-shadow: 0 0 1px #fff;
         transition: height 0.3s;
 	}
 	
 	&:hover, &:focus {
-	    background-color: rgba(0,0,0,0.2);
+	    background-color: rgba  (247, 195, 49, .2);
     }
 `;
 
@@ -231,12 +230,11 @@ class Reference extends Component {
             <Section id="reference">
                 <TitleArea>
                     <SectionTitle>Tidigare projekt</SectionTitle>
-                    <SectionSubTitle>Nedan visar vi ett axplock från ett antal responsiva hemsidor som vi tidigare
+                    <SectionSubTitle>Nedan visar vi ett axplock av responsiva hemsidor som vi tidigare
                         har arbetat med.</SectionSubTitle>
                 </TitleArea>
 
                 <Wrapper>
-                    <FadedBorder />
                     <NavContainer>
                         <NavItem direction={'left'}onClick={ () => this.updateActiveItem(this.state.activeItem - 1) }>
                             <Icon size={"3em"} icon={"chevronUp"} />
@@ -286,7 +284,6 @@ class Reference extends Component {
                         </List>
                     </DotNavigationWrapper>
 
-                    <FadedBorderReversed />
                 </Wrapper>
             </Section>
         );

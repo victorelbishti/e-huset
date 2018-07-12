@@ -10,14 +10,9 @@ const Section = styled.section`
     display: flex;
     align-items: center;
     position: relative;
-    padding: 50px 0;
+    padding: 50px 15px;
     background: url(${bgImg}) no-repeat center center fixed;
     background-size: cover;
-    
-    @media (max-width: ${size.small}) {
-        margin: 0;
-        padding: 20px 40px;
-    }
 `;
 
 const PhotoOverlay = styled(Overlay)`

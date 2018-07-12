@@ -50,7 +50,7 @@ injectGlobal`
         font-weight: normal;
         line-height: 1.5em;
         -webkit-font-smoothing: antialiased;
-        background-color: rgba(247,247,247,0.9);
+        background-color: rgba(247, 247, 247, 0.9);
     }
     
     main { position: relative; overflow-x: hidden; }

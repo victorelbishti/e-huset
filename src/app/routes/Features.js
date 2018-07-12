@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Icon from "../components/Icon";
-import { Grid, ReferenceCard, WhiteReferenceCard, Container, SectionTitle, SectionSubTitle, GridCell, TitleArea, Button, colors } from "../components/Styled";
+import { Grid, ReferenceCard, CustomReferenceCard, Container, SectionTitle, GridCell, TitleArea, Button, colors } from "../components/Styled";
 import Scroll from "smoothscroll";
 import AOS from "aos";
-import ImgSrc from "../images/E-Huset_Displays.png";
+import ImgSrc from "../images/responsive-ehuset.jpg";
 
 const Section = styled.section`
-    margin: 20px 0;
+    margin-top: 20px;
 `;
 
 const Image = styled.img`
@@ -31,6 +31,10 @@ const CallToAction = styled(Button)`
     width: 80%;
     text-transform: uppercase;
     padding: 15px 10px;
+`;
+
+const AnotherCard = styled(ReferenceCard)`
+    padding-bottom: 0;
 `;
 
 class Features extends Component {
@@ -61,7 +65,7 @@ class Features extends Component {
                 <ReferenceCard>
                     <Container>
                         <TitleArea>
-                            <SectionTitle>Låt oss ta hand om din IT</SectionTitle>
+                            <SectionTitle>Vi tar hand om din webbdrift</SectionTitle>
                                 <Text>Låt e-huset hjälpa dig, vi är experter på webbutveckling och webbdesign.
                                 Oavsett om du är i behov av en ny hemsida, en digital renovering eller några timmar
                                 support i månaden så finns vi här för att hjälpa dig.</Text>
@@ -70,7 +74,7 @@ class Features extends Component {
                     </Container>
                 </ReferenceCard>
 
-                <WhiteReferenceCard>
+                <CustomReferenceCard>
                     <Container>
                         <Grid columns={"1fr 1fr"} gap={"20px"}>
                             <GridCell>
@@ -84,25 +88,25 @@ class Features extends Component {
                             </GridCell>
                         </Grid>
                     </Container>
-                </WhiteReferenceCard>
+                </CustomReferenceCard>
 
-                <ReferenceCard>
+                <AnotherCard>
                     <Container>
                         <Grid columns={"1fr 1fr"} gap={"20px"}>
                             <GridCell align={"center"}>
-                                <Icon icon={"upload"} fill={colors.light} />
+                                <Icon icon={"upload"} fill={colors.fresh} />
                                 <RowTitle>Säker hosting</RowTitle>
                                 <p>Tillåt oss att ta hand om din hemsida med säker hosting från ett av Sveriges bästa webbhotell.</p>
                             </GridCell>
 
                             <GridCell align={"center"}>
-                                <Icon icon={"analytics"} fill={colors.light} />
+                                <Icon icon={"analytics"} fill={colors.fresh} />
                                 <RowTitle>Statistik</RowTitle>
                                 <p>Behöver du få statistik över besökare och trafik på din webbplats? Inga problem.</p>
                             </GridCell>
                         </Grid>
                     </Container>
-                </ReferenceCard>
+                </AnotherCard>
             </Section>
         );
     }

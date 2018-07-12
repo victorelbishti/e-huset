@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Grid, SectionDiv, GridCell, VerticalLine, WhiteLink } from "./Styled";
+import { SectionDiv, Link } from "./Styled";
 
 const Footer = styled.footer`
     display: flex;
@@ -53,7 +53,7 @@ class Header extends Component {
                         <a href={"tel:+46709515149"}>+46 (0) 709 515 149</a>
                     </FooterCard>
                     <FooterDiv>
-                        <p>Copyright 2018 <WhiteLink href="http://e-huset.se/">E-huset.se</WhiteLink> | All Rights Reserved</p>
+                        <p>Copyright 2018 <Link color={"#fff"} href="http://e-huset.se/">E-huset.se</Link> | All Rights Reserved</p>
                     </FooterDiv>
                 </SectionDiv>
             </Footer>
