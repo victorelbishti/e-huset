@@ -33,10 +33,6 @@ const CallToAction = styled(Button)`
     padding: 15px 10px;
 `;
 
-const AnotherCard = styled(ReferenceCard)`
-    padding-bottom: 0;
-`;
-
 class Features extends Component {
 
     constructor(props) {
@@ -90,7 +86,7 @@ class Features extends Component {
                     </Container>
                 </CustomReferenceCard>
 
-                <AnotherCard>
+                <ReferenceCard>
                     <Container>
                         <Grid columns={"1fr 1fr"} gap={"20px"}>
                             <GridCell align={"center"}>
@@ -106,7 +102,7 @@ class Features extends Component {
                             </GridCell>
                         </Grid>
                     </Container>
-                </AnotherCard>
+                </ReferenceCard>
             </Section>
         );
     }

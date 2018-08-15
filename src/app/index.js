@@ -88,6 +88,17 @@ injectGlobal`
         opacity: 0;
       }
     }
+    
+    @keyframes sk-cubeGridScaleDelay {
+        0%,
+        70%,
+        100% {
+            transform: scale3D(1, 1, 1);
+        }
+        35% {
+            transform: scale3D(0, 0, 1);
+        }
+    }
 `;
 
 render((

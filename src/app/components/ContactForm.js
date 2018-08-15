@@ -47,6 +47,7 @@ class ContactForm extends Component {
             name: '',
             email: '',
             message: '',
+            phone: '',
             formMessage: '',
             formValid: false,
             showMessage: false
@@ -67,16 +68,16 @@ class ContactForm extends Component {
     }
 
     handleSubmit(event) {
-        console.log(this.state);
-        const { name, email, message } = this.state;
+        const { name, email, phone, message } = this.state;
         event.preventDefault();
 
         const emailValid = email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
         const nameValid = (name != "") ? true : false;
+        const phoneValid = (phone != "") ? true : false;
 
-        if (emailValid == null || nameValid == false) {
+        if (emailValid == null || nameValid == false || phoneValid == false) {
             this.setState({
-                formMessage: 'Vänligen ange korrekt namn och e-postadress.',
+                formMessage: 'Vänligen ange korrekt namn, telefonnummer och e-postadress.',
                 formValid: false,
                 showMessage: true
             });
@@ -90,6 +91,7 @@ class ContactForm extends Component {
             const params = new URLSearchParams();
             params.append('name', name);
             params.append('email', email);
+            params.append('phone', phone);
             params.append('message', message);
 
             axios({
@@ -112,6 +114,7 @@ class ContactForm extends Component {
                 <FieldSet>
                     <TextInput type={"text"} name={"name"} placeholder={"Namn *"} value={this.state.name} onChange={this.handleChange} />
                     <TextInput type={"email"} name={"email"} placeholder={"E-post *"} value={this.state.email} onChange={this.handleChange} />
+                    <TextInput type={"phone"} name={"phone"} placeholder={"Telefonnummer *"} value={this.state.phone} onChange={this.handleChange} />
                     <TextArea name={"message"} placeholder={"Meddelande"} value={this.state.message} onChange={this.handleChange} />
                     <Button type={"submit"}>Skicka</Button>
 

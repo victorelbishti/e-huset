@@ -7,6 +7,7 @@ import ReactRotatingText from 'react-rotating-text';
 
 // Components & Styles
 import Icon from "../components/Icon";
+import Loader from "../components/Loader";
 import {SectionDiv, SectionTitle, Overlay, size, colors} from "../components/Styled";
 
 // Images
@@ -116,7 +117,8 @@ class Home extends Component {
         super(props);
 
         this.state = {
-            videoHeight: 0
+            videoHeight: 0,
+            isLoading: true
         };
 
         this.handleClick = this.handleClick.bind(this);
@@ -146,6 +148,9 @@ class Home extends Component {
     componentDidMount() {
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions);
+
+        // setTimeout(() => this.setState({isLoading: false}), 1000);
+
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);

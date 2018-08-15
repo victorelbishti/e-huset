@@ -7,7 +7,6 @@ import Modal from "./Modal";
 
 export const navItems = {
     features: 'Vad vi gör',
-    packages: 'Våra paket',
     services: 'Support- & Serviceavtal',
     reference: 'Tidigare projekt',
     contact: 'Kontakta oss'

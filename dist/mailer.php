@@ -1,14 +1,16 @@
 <?php
 
-if (isset($_POST['name']) && isset($_POST['email'])) {
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['phone'])) {
 
     $to = "info@e-huset.se";
     $from = $_POST["email"];
     $subject = 'Kontakt från E-huset.se';
     $name = $_POST["name"];
+    $phone = $_POST["phone"];
 
     // Message
     $message = "Från: " . $name . " <" . $from . "><br>";
+    $message .= "Telefonnummer: " . $phone . "<br>";
     $message .= "Meddelande: " . $_POST["message"];
 
     // Headers

@@ -53,9 +53,9 @@ const Wrapper = styled.div`
 const Item = styled.div`
     width: calc(100% - 40px);
     display: flex;
-    align-items: center;
+    align-items: start;
     margin: 20px;
-    top: 0;
+    top: ${props => (props.relative) ? '0' : '10px'};
     position: ${props => (props.relative) ? `relative` : `absolute`};
     text-align: center;
     height: 100%;

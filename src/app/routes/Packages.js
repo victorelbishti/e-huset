@@ -82,6 +82,11 @@ const ListItem = styled.li`
     }
 `;
 
+const DisabledItem = styled.span`
+    color: #c2c2c2;
+    text-decoration: line-through;
+`;
+
 const PackageDescription = styled.div`
     padding: 0 20px;
 `;
@@ -118,7 +123,7 @@ class Packages extends Component {
                                     <h2>Webbplats - Basic</h2>
                                 </PackageName>
                                 <Price>9 995 kr</Price>
-                                <RecurringPrice>Underhåll: 795 kr/månad</RecurringPrice>
+                                <RecurringPrice>Underhåll: 595 kr/månad</RecurringPrice>
                             </PackageDetails>
 
                             <List>
@@ -127,31 +132,37 @@ class Packages extends Component {
                                     </span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Utveckling & programmering</span>
-                                </ListItem>
-                                <ListItem>
                                     <span>Skräddarsydd design</span>
                                 </ListItem>
                                 <ListItem>
                                     <span>Responsiv / mobilanpassad</span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Lansering</span>
+                                    <span>Telefon- & mailsupport</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Uppdatering av programvara</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Säkerhetskopiering & -kontroll</span>
                                 </ListItem>
                                 <ListItem>
                                     <span>One-pager</span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>------</span>
+                                    <DisabledItem>Sökoptimering (SEO)</DisabledItem>
                                 </ListItem>
                                 <ListItem>
-                                    <span>------</span>
+                                    <DisabledItem>Besöksstatistik</DisabledItem>
                                 </ListItem>
                                 <ListItem>
-                                    <span>------</span>
+                                    <DisabledItem>Fri & säker hosting</DisabledItem>
                                 </ListItem>
                                 <ListItem>
-                                    <span>------</span>
+                                    <DisabledItem>SSL-certifikat (HTTPS)</DisabledItem>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Nöjd-kund-garanti</span>
                                 </ListItem>
                             </List>
                             <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
@@ -172,16 +183,19 @@ class Packages extends Component {
                                     </span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Utveckling & programmering</span>
-                                </ListItem>
-                                <ListItem>
                                     <span>Skräddarsydd design</span>
                                 </ListItem>
                                 <ListItem>
                                     <span>Responsiv / mobilanpassad</span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Lansering</span>
+                                    <span>Telefon- & mailsupport</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Uppdatering av programvara</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Säkerhetskopiering & -kontroll</span>
                                 </ListItem>
                                 <ListItem>
                                     <span>1-10 undersidor</span>
@@ -197,6 +211,9 @@ class Packages extends Component {
                                 </ListItem>
                                 <ListItem>
                                     <span>SSL-certifikat (HTTPS)</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Nöjd-kund-garanti</span>
                                 </ListItem>
                             </List>
                             <Button onClick={ () => this.handleButtonClick('contact') }>Beställ nu</Button>
@@ -216,10 +233,13 @@ class Packages extends Component {
                                     <span>Responsiv / mobilanpassad</span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Utveckling & programmering</span>
+                                    <span>Skräddarsydd design</span>
                                 </ListItem>
                                 <ListItem>
-                                    <span>Skräddarsydd design</span>
+                                    <span>Telefon- & mailsupport</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Uppdatering av programvara</span>
                                 </ListItem>
                                 <ListItem>
                                     <span>Sökoptimering (SEO)</span>
@@ -232,6 +252,9 @@ class Packages extends Component {
                                 </ListItem>
                                 <ListItem>
                                     <span>SSL-certifikat (HTTPS)</span>
+                                </ListItem>
+                                <ListItem>
+                                    <span>Nöjd-kund-garanti</span>
                                 </ListItem>
                             </List>
                             <PackageDescription>
