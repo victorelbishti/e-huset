@@ -33,6 +33,8 @@ const CallToAction = styled(Button)`
     padding: 15px 10px;
 `;
 
+// <Button onClick={ () => this.handleButtonClick('packages') }>Se våra paket</Button>
+
 class Features extends Component {
 
     constructor(props) {
@@ -77,7 +79,9 @@ class Features extends Component {
                                 <RowTitle>Webbdesign & -utveckling</RowTitle>
                                 <p>Alla våra projekt skapas med en personlig och modern
                                     design som fungerar lika bra på datorn som i mobilen.</p>
-                                <Button onClick={ () => this.handleButtonClick('packages') }>Se våra paket</Button>
+                                <p>Välj mellan att leasa din hemsida eller betala fast pris.
+                                    Kontakta oss för att få veta mer.</p>
+                                <Button onClick={ () => this.handleButtonClick('contact') }>Kontakta oss</Button>
                             </GridCell>
                             <GridCell>
                                 <Image src={ImgSrc} alt={"E-huset.se"} />

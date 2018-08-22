@@ -5,8 +5,9 @@ import Icon from "../components/Icon";
 
 // Images
 import ScandinavianMeditationImage from "../images/responsive-scandinavian-meditation.jpg";
-import EuManagementImage from "../images/responsive-eumanagement.jpg";
 import BosbecImage from "../images/responsive-bosbec.jpg";
+import ZetiqImage from "../images/responsive-zetiq.jpg";
+import CfsImage from "../images/responsive-cfs.jpg";
 
 const Section = styled.section`
     padding: 50px 0 20px 0;
@@ -172,6 +173,14 @@ const Link = styled.a`
 
 const items = {
     0: {
+        title: 'Zetiq AB',
+        image: ZetiqImage,
+        link: 'http://zetiq.se',
+        text: `Zetiq AB är ett teknikkonsultbolag med verksamhet i Stockholm och Göteborg. Målet med hemsidan var att skapa
+                en modern och mobilanpassad digital plattform som marknadsför deras tjänster samt de jobb de rekryterar för. Hemsidan är 
+                uppbyggd som en one-pager och är både enkel att använda som administratör och besökare.`
+    },
+    1: {
         title: 'Bosbec',
         image: BosbecImage,
         link: 'http://bosbec.com/',
@@ -179,22 +188,23 @@ const items = {
                 Deras lösningar hjälper idag stora välkända företag som Telia, Satmetrix, Ericsson och Apoteket.
                 På deras hemsida presenterar de sina lösningar och sin vision med företaget.`
     },
-    1: {
+    2: {
+        title: 'CFS Larm AB',
+        image: CfsImage,
+        link: 'http://cfs.nu',
+        text: `CFS Larm AB levererar och installerar olika produkter för förebyggande inbrottsskydd till företag i Dalarna.
+                Utöver en helt ny desgin, som är både mer visuellt tilltalande och tekniskt mer anpassad efter moderna enheter, så är
+                CFS nya hemsida utrustad med helt ny funktionalitet än deras tidigare hemsida - som hjälper företag att automatisera viktiga
+                delar i deras kundhantering.`
+
+    },
+    3: {
         title: 'Scandinavian Meditation',
         image: ScandinavianMeditationImage,
         link: 'https://scandinavianmeditation.com',
         text: `Scandinavian Meditation är en hemsida som ger verktyg för meditation, mindfulness och stresshantering.
                 Vissa av verktygen, som ljudfiler med guidade meditationer, är begränsade till dess betalande användare medan
                 andra verktyg för att förmedla tips och idéer, exempelvis bloggen, är öppen för alla besökare.`
-    },
-    2: {
-        title: 'EU Management',
-        image: EuManagementImage,
-        link: 'http://eumanagement.se/',
-        text: `Europe Fotball Management AB är en svensk fotbollsagentur som hjälper spelare i deras karriär. 
-                EU Management fokuserar på att hjälpa spelare med marknadsföring, ekonomi och den legala aspekten 
-                som berör alla proffesionella fotbollsspelare. Hemsidan är har en enkel och stilren design fylld med foton
-                från deras arbete.`
     }
 };
 
